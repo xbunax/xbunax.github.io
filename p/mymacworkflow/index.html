@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='(spotify tui)
-[toc]
-My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
 Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 Reserch Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。 同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。'>
 <title>MyMacWorkflow</title>
 
 <link rel='canonical' href='http://localhost:1313/p/mymacworkflow/'>
 
 <link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='MyMacWorkflow'>
-<meta property='og:description' content='(spotify tui)
-[toc]
-My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
+<meta property='og:description' content='My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
 Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 Reserch Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。 同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。'>
 <meta property='og:url' content='http://localhost:1313/p/mymacworkflow/'>
 <meta property='og:site_name' content='Time waits for no one'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-03-05T17:13:34&#43;08:00'/><meta property='article:modified_time' content='2024-03-05T17:13:34&#43;08:00'/><meta property='og:image' content='http://localhost:1313/true' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-03-05T17:13:34&#43;08:00'/><meta property='article:modified_time' content='2024-03-05T17:13:34&#43;08:00'/><meta property='og:image' content='https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png' />
 <meta name="twitter:title" content="MyMacWorkflow">
-<meta name="twitter:description" content="(spotify tui)
-[toc]
-My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
+<meta name="twitter:description" content="My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
 Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 Reserch Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。 同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/true' />
+    <meta name="twitter:image" content='https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -298,7 +292,7 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
         <div class="article-image">
             <a href="/p/mymacworkflow/">
                 
-                    <img src="/true" loading="lazy" alt="Featured image of post MyMacWorkflow" />
+                    <img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" loading="lazy" alt="Featured image of post MyMacWorkflow" />
                 
             </a>
         </div>
@@ -361,18 +355,8 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
     <section class="article-content">
     
     
-    <p><img src="/cover.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="cover"
-	
-	
->
-(spotify tui)</p>
-<p>[toc]</p>
+    <!-- ![cover](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png) -->
+<!-- *spotify tui* -->
 <h1 id="my-mac-workflow">My Mac Workflow</h1>
 <p>作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。</p>
 <ul>
@@ -385,7 +369,7 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
 并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。</li>
 <li>同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。</li>
 </ul>
-<p><img src="/zotero.png"
+<p><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/zotero.png"
 	
 	
 	
@@ -398,7 +382,7 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
 <h3 id="material-project">Material Project</h3>
 <p>作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，<a class="link" href="https://next-gen.materialsproject.org/"  target="_blank" rel="noopener"
     >MaterialProject</a>，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了<code>python</code>的<code>package(pymatgen)</code>方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。</p>
-<p><img src="/material.png"
+<p><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/material.png"
 	
 	
 	
