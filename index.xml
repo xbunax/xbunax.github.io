@@ -6,7 +6,62 @@
         <description>Recent content on Time waits for no one</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 25 Feb 2024 13:36:38 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 05 Mar 2024 17:13:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MyMacWorkflow</title>
+        <link>http://localhost:1313/p/mymacworkflow/</link>
+        <pubDate>Tue, 05 Mar 2024 17:13:34 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/mymacworkflow/</guid>
+        <description>&lt;img src="http://localhost:1313/true" alt="Featured image of post MyMacWorkflow" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/cover.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;cover&#34;
+	
+	
+&gt;
+(spotify tui)&lt;/p&gt;
+&lt;p&gt;[toc]&lt;/p&gt;
+&lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow&lt;/h1&gt;
+&lt;p&gt;作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tips：本人专业背景为理论物理，主要科研工作偏向使用&lt;code&gt;Unix-like&lt;/code&gt;系统，所以不会涉及windows(但是可以使用&lt;code&gt;wsl2&lt;/code&gt;)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reserch&#34;&gt;Reserch&lt;/h2&gt;
+&lt;h3 id=&#34;zotero&#34;&gt;Zotero&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。
+并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
+&lt;li&gt;同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/zotero.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;zotero&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;material-project&#34;&gt;Material Project&lt;/h3&gt;
+&lt;p&gt;作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，&lt;a class=&#34;link&#34; href=&#34;https://next-gen.materialsproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MaterialProject&lt;/a&gt;，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了&lt;code&gt;python&lt;/code&gt;的&lt;code&gt;package(pymatgen)&lt;/code&gt;方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/material.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;material&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>First</title>
         <link>http://localhost:1313/p/first/</link>
         <pubDate>Sun, 25 Feb 2024 13:36:38 +0800</pubDate>
