@@ -23,8 +23,8 @@
 &lt;h3 id=&#34;zotero&#34;&gt;Zotero&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。
-并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
-&lt;li&gt;同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
+并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
+&lt;li&gt;同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/zotero.png&#34;
 	

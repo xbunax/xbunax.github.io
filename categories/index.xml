@@ -6,12 +6,28 @@
         <description>Recent content in Categories on Time waits for no one</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 05 Mar 2024 17:13:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Mar 2024 13:17:22 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Beautify</title>
+        <link>http://localhost:1313/categories/beautify/</link>
+        <pubDate>Wed, 06 Mar 2024 13:17:22 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/beautify/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>MacOS</title>
         <link>http://localhost:1313/categories/macos/</link>
-        <pubDate>Tue, 05 Mar 2024 17:13:34 +0800</pubDate>
+        <pubDate>Wed, 06 Mar 2024 13:17:22 +0800</pubDate>
         
         <guid>http://localhost:1313/categories/macos/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Spotify</title>
+        <link>http://localhost:1313/categories/spotify/</link>
+        <pubDate>Wed, 06 Mar 2024 13:17:22 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/spotify/</guid>
         <description></description>
         </item>
         <item>

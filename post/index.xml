@@ -6,7 +6,150 @@
         <description>Recent content in Posts on Time waits for no one</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 05 Mar 2024 17:13:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Mar 2024 13:17:22 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Spotify_tui</title>
+        <link>http://localhost:1313/p/spotify_tui/</link>
+        <pubDate>Wed, 06 Mar 2024 13:17:22 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/spotify_tui/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/cover.png" alt="Featured image of post Spotify_tui" /&gt;&lt;p&gt;对于使用Spotify作为主力音乐流媒体的人来说，Spotify官方的桌面app体验并不是很好，无法看歌词，而且UI水平对于我个人审美来说感觉并不是很好看。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_desktop.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;spotify_desktop&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;spotify-第三方客户端&#34;&gt;Spotify 第三方客户端&lt;/h3&gt;
+&lt;h4 id=&#34;spotify-webui&#34;&gt;Spotify webUI&lt;/h4&gt;
+&lt;p&gt;这时候就要选择第三方的Spotify客户端了，或者也可以使用Spotify的webUI然后使用美化插件，我webUI使用的Arc浏览器搭配上Gallery美化，其实最后的效果还可以，而且很轻量化，除了没法看歌词都很完美。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_web.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;spotify_web&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;spotify-tui&#34;&gt;Spotify TUI&lt;/h4&gt;
+&lt;p&gt;但是webUI到底还是官方的UI而且没法看歌词，而且作为重度终端使用者，还是希望在终端上使用Spotify。我选择使用的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/aome510/spotify-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;spotify_player&lt;/code&gt;&lt;/a&gt;一个用rust开发的开源的Spotify TUI，使用vim的键位并且在&lt;code&gt;iTerm2&lt;/code&gt;中可以显示专辑封面，同时也可以在配置文件&lt;code&gt;~/.config/spotify-player/app.toml&lt;/code&gt;中进行自定义。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_tui_playback.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;spotify_tui_playback&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;spotify-lyrics&#34;&gt;Spotify Lyrics&lt;/h3&gt;
+&lt;p&gt;接下来要解决官方客户端无法看歌词的问题，我们可以使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/raitonoberu/sptlrx.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;sptlrx&lt;/code&gt;&lt;/a&gt;这个开源的终端歌词同步软件，搭配&lt;code&gt;spotify_player&lt;/code&gt;使用可以看当前歌曲的歌词。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/sptlrx.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sptlrx&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;custom-your-tui&#34;&gt;Custom Your TUI&lt;/h3&gt;
+&lt;p&gt;这样我们就实现了在终端上使用Spotify并且显示滚动歌词，同时搭配&lt;a class=&#34;link&#34; href=&#34;https://github.com/karlstav/cava#macos-1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;cava&lt;/code&gt;&lt;/a&gt;(一个Audio Visualizer，依赖&lt;a class=&#34;link&#34; href=&#34;https://github.com/kyleneideck/BackgroundMusic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;backgroud Music&lt;/code&gt;&lt;/a&gt;实现)，最后使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/xorg62/tty-clock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;tty-clock&lt;/code&gt;&lt;/a&gt;为整个布局点缀一下，就可以实现封面的效果了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/cover.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Spotify&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
+&lt;p&gt;虽然这样布局很不错，但是每次都要手动分屏很麻烦，能不能实现在终端敲一个命令自动分屏布局并且每个&lt;code&gt;pane&lt;/code&gt;自动执行对应的命令呢，当然是可以的啦。&lt;/p&gt;
+&lt;p&gt;我一开始选择使用&lt;code&gt;tmux&lt;/code&gt;和&lt;code&gt;tmuxp&lt;/code&gt;这样就可以用&lt;code&gt;yml&lt;/code&gt;配置文件写好&lt;code&gt;tmux session&lt;/code&gt;布局并且在对应的&lt;code&gt;pane&lt;/code&gt;执行不同的命令，但是研究了一下&lt;code&gt;tmuxp&lt;/code&gt;发现好像无法实现封面那样的复杂布局，只有几个预设的布局，而且&lt;code&gt;tmux&lt;/code&gt;无法显示超过1M大小的图片所以&lt;code&gt;spotify_player&lt;/code&gt;无法显示图片。&lt;/p&gt;
+&lt;p&gt;所以最后另辟蹊径，使用&lt;code&gt;AppleScript&lt;/code&gt;直接对&lt;code&gt;iTerm2&lt;/code&gt;进行布局。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-AppleScript&#34; data-lang=&#34;AppleScript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;application&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;iTerm&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;window&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;tab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nv&#34;&gt;split&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;vertically&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nv&#34;&gt;split&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;vertically&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;third&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;tab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nv&#34;&gt;split&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;horizontally&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;tab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nb&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;spotify_player&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;second&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;tab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nb&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sptlrx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;third&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;tab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nb&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tty-clock -c -s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;fourth&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;tab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nb&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cava&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样将&lt;code&gt;AppleScript&lt;/code&gt;保存为&lt;code&gt;scpt&lt;/code&gt;文件，只需要在终端中用&lt;code&gt;osascript scpt文件路径&lt;/code&gt;执行&lt;code&gt;AppleScript&lt;/code&gt;脚本就可以实现一键布局啦。如果嫌每次输&lt;code&gt;osascript&lt;/code&gt;命令很麻烦，在&lt;code&gt;~/.zshrc&lt;/code&gt;中用&lt;code&gt;alias&lt;/code&gt;映射一下命令或者写个&lt;code&gt;shell&lt;/code&gt;脚本添加到环境变量就可以啦。&lt;/p&gt;
+&lt;video width=&#34;720&#34; height=&#34;480&#34; controls&gt;
+  &lt;source src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/result.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;p&gt;这就是最后的效果啦。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;如果要使用本教程需要会一点&lt;code&gt;Unix-like&lt;/code&gt;系统的操作，最基础的&lt;code&gt;ls cd&lt;/code&gt;这些需要会使用，如果是Mac则要安装&lt;code&gt;Homebrew&lt;/code&gt;作为包管理器，方便管理和安装。&lt;/li&gt;
+&lt;li&gt;如果要使用&lt;code&gt;spotify_player&lt;/code&gt;需要一个Spotify的会员账号，并且去&lt;a class=&#34;link&#34; href=&#34;https://developer.spotify.com/documentation/web-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dev spotify&lt;/a&gt;申请一个&lt;code&gt;client id&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>MyMacWorkflow</title>
         <link>http://localhost:1313/p/mymacworkflow/</link>
         <pubDate>Tue, 05 Mar 2024 17:13:34 +0800</pubDate>
@@ -23,8 +166,8 @@
 &lt;h3 id=&#34;zotero&#34;&gt;Zotero&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。
-并且我主要使用latex为论文排版，zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
-&lt;li&gt;同时zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
+并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
+&lt;li&gt;同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/zotero.png&#34;
 	
