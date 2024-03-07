@@ -589,6 +589,27 @@ Optimization 虽然这样布局很不错，但是每次都要手动分屏很麻�
 
      
     
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"avatar":"","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"","locale":{"admin":"July"},"placeholder":"","requiredMeta":["name","email","url"],"serverURL":"comments.zhumocn.com","visitor":""});
+</script>
+
+    
 
     <footer class="site-footer">
     <section class="copyright">
