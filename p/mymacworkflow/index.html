@@ -2,20 +2,35 @@
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
-Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 Reserch Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。 同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。'>
+Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 推荐安装homebrew作为MacOS上的包管理器。 Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。 同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。
+Pngpaste 我的论文写作工具主要是neovim&#43;latex，但是由于饱受latex上古语法困扰最近也在尝试typst并且得益于neovim活跃的社区，typst的lsp还有双向链接工具已经完全可用了。
+不管是latex还是typst写作时一直有一个痛点那就是插入图片，往往我会将图片截图存在剪贴板中，但是在用neovim写论文时，经常要切出去保存图片非常影响效率。这时候我们就可以用pngpaste这个CLI工具，可以在命令行环境下读取剪贴板图片保存为png格式，这样在neovim中用toggleterm插件写一个autocmd自动保存剪贴板图片，大大提升了效率。
+Window Manager 由于苹果的封闭，Mac上的窗口管理器选择并不是很多，yabai虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且yabai的主要贡献者只有作者一人，yabai调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。
+现在博主主力的window Manager是amethyst。相比于yabai的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且amethyst配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像yabai设置好yabairc还需要利用skhd再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。
+但是不需要关闭SIP，就意味着相较于yabai，amethyst相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是amethyst作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口。'>
 <title>MyMacWorkflow</title>
 
 <link rel='canonical' href='http://localhost:1313/p/mymacworkflow/'>
 
 <link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='MyMacWorkflow'>
 <meta property='og:description' content='My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
-Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 Reserch Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。 同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。'>
+Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 推荐安装homebrew作为MacOS上的包管理器。 Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。 同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。
+Pngpaste 我的论文写作工具主要是neovim&#43;latex，但是由于饱受latex上古语法困扰最近也在尝试typst并且得益于neovim活跃的社区，typst的lsp还有双向链接工具已经完全可用了。
+不管是latex还是typst写作时一直有一个痛点那就是插入图片，往往我会将图片截图存在剪贴板中，但是在用neovim写论文时，经常要切出去保存图片非常影响效率。这时候我们就可以用pngpaste这个CLI工具，可以在命令行环境下读取剪贴板图片保存为png格式，这样在neovim中用toggleterm插件写一个autocmd自动保存剪贴板图片，大大提升了效率。
+Window Manager 由于苹果的封闭，Mac上的窗口管理器选择并不是很多，yabai虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且yabai的主要贡献者只有作者一人，yabai调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。
+现在博主主力的window Manager是amethyst。相比于yabai的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且amethyst配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像yabai设置好yabairc还需要利用skhd再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。
+但是不需要关闭SIP，就意味着相较于yabai，amethyst相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是amethyst作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口。'>
 <meta property='og:url' content='http://localhost:1313/p/mymacworkflow/'>
 <meta property='og:site_name' content='𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-03-05T17:13:34&#43;08:00'/><meta property='article:modified_time' content='2024-03-05T17:13:34&#43;08:00'/><meta property='og:image' content='https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png' />
 <meta name="twitter:title" content="MyMacWorkflow">
 <meta name="twitter:description" content="My Mac Workflow 作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。
-Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 Reserch Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。 同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。"><meta name="twitter:card" content="summary_large_image">
+Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-like系统，所以不会涉及windows(但是可以使用wsl2)。 推荐安装homebrew作为MacOS上的包管理器。 Zotero 作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。 同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。 Material Project 作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，MaterialProject，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了python的package(pymatgen)方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。
+Pngpaste 我的论文写作工具主要是neovim&#43;latex，但是由于饱受latex上古语法困扰最近也在尝试typst并且得益于neovim活跃的社区，typst的lsp还有双向链接工具已经完全可用了。
+不管是latex还是typst写作时一直有一个痛点那就是插入图片，往往我会将图片截图存在剪贴板中，但是在用neovim写论文时，经常要切出去保存图片非常影响效率。这时候我们就可以用pngpaste这个CLI工具，可以在命令行环境下读取剪贴板图片保存为png格式，这样在neovim中用toggleterm插件写一个autocmd自动保存剪贴板图片，大大提升了效率。
+Window Manager 由于苹果的封闭，Mac上的窗口管理器选择并不是很多，yabai虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且yabai的主要贡献者只有作者一人，yabai调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。
+现在博主主力的window Manager是amethyst。相比于yabai的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且amethyst配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像yabai设置好yabairc还需要利用skhd再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。
+但是不需要关闭SIP，就意味着相较于yabai，amethyst相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是amethyst作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -270,10 +285,12 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#reserch">Reserch</a>
+    <li>
       <ol>
         <li><a href="#zotero">Zotero</a></li>
         <li><a href="#material-project">Material Project</a></li>
+        <li><a href="#pngpaste">Pngpaste</a></li>
+        <li><a href="#window-manager">Window Manager</a></li>
       </ol>
     </li>
   </ol>
@@ -375,10 +392,13 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
 <!-- *spotify tui* -->
 <h1 id="my-mac-workflow">My Mac Workflow</h1>
 <p>作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。</p>
+<blockquote>
 <ul>
 <li>Tips：本人专业背景为理论物理，主要科研工作偏向使用<code>Unix-like</code>系统，所以不会涉及windows(但是可以使用<code>wsl2</code>)。</li>
+<li>推荐安装<code>homebrew</code>作为MacOS上的包管理器。</li>
 </ul>
-<h2 id="reserch">Reserch</h2>
+</blockquote>
+<!-- ## Reserch  -->
 <h3 id="zotero">Zotero</h3>
 <ul>
 <li>作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。
@@ -398,7 +418,8 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
 <h3 id="material-project">Material Project</h3>
 <p>作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，<a class="link" href="https://next-gen.materialsproject.org/"  target="_blank" rel="noopener"
     >MaterialProject</a>，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了<code>python</code>的<code>package(pymatgen)</code>方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。</p>
-<p><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/material.png"
+<!-- ![material](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/material.png) -->
+<p><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202403091438804.png"
 	
 	
 	
@@ -408,6 +429,13 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
 	
 	
 ></p>
+<h3 id="pngpaste">Pngpaste</h3>
+<p>我的论文写作工具主要是<code>neovim</code>+<code>latex</code>，但是由于饱受<code>latex</code>上古语法困扰最近也在尝试<code>typst</code>并且得益于<code>neovim</code>活跃的社区，<code>typst</code>的<code>lsp</code>还有双向链接工具已经完全可用了。</p>
+<p>不管是<code>latex</code>还是<code>typst</code>写作时一直有一个痛点那就是插入图片，往往我会将图片截图存在剪贴板中，但是在用<code>neovim</code>写论文时，经常要切出去保存图片非常影响效率。这时候我们就可以用<code>pngpaste</code>这个CLI工具，可以在命令行环境下读取剪贴板图片保存为<code>png</code>格式，这样在<code>neovim</code>中用<code>toggleterm</code>插件写一个<code>autocmd</code>自动保存剪贴板图片，大大提升了效率。</p>
+<h3 id="window-manager">Window Manager</h3>
+<p>由于苹果的封闭，Mac上的窗口管理器选择并不是很多，<code>yabai</code>虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且<code>yabai</code>的主要贡献者只有作者一人，<code>yabai</code>调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。</p>
+<p>现在博主主力的window Manager是<code>amethyst</code>。相比于<code>yabai</code>的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且<code>amethyst</code>配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像<code>yabai</code>设置好<code>yabairc</code>还需要利用<code>skhd</code>再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。</p>
+<p>但是不需要关闭SIP，就意味着相较于<code>yabai</code>，<code>amethyst</code>相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是<code>amethyst</code>作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口。</p>
 
 </section>
 
@@ -480,7 +508,7 @@ Tips：本人专业背景为理论物理，主要科研工作偏向使用Unix-li
     }
 </style><script>
     
-    Waline.init({"avatar":"","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"","locale":{"admin":"July"},"placeholder":"","requiredMeta":["name","email","url"],"serverURL":"comments.zhumocn.com","visitor":""});
+    Waline.init({"avatar":"img/cat.png","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"","locale":{"admin":"July"},"placeholder":"","requiredMeta":["name","email","url"],"serverURL":"comments.zhumocn.com","visitor":""});
 </script>
 
     
