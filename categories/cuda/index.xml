@@ -250,7 +250,7 @@
 &lt;/div&gt;&lt;p&gt;这里同样是利用&lt;code&gt;cudaMemcpy&lt;/code&gt;这个函数，将&lt;code&gt;device&lt;/code&gt;的数据复制到&lt;code&gt;host&lt;/code&gt;中，这里并没有显示的用&lt;code&gt;cudaDeviceSynchronize&lt;/code&gt;这个API让CPU等待GPU计算完成再计算，&lt;code&gt;cudaMemcpy&lt;/code&gt;隐含了同步的操作。&lt;/p&gt;
 &lt;p&gt;至此我们已经完成了利用CUDA实现矩阵乘法的流程。如果想看完整代码可以移步我的&lt;a class=&#34;link&#34; href=&#34;https://github.com/xbunax/cuda_c/blob/main/marix/main.cu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;代码仓库 &lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
 &lt;p&gt;利用CUDA编程的整体思路还是想当固定的，即为&lt;code&gt;device&lt;/code&gt;分配内存，将&lt;code&gt;host&lt;/code&gt;数据拷贝到&lt;code&gt;device&lt;/code&gt;中，&lt;code&gt;device&lt;/code&gt;计算，完成后将&lt;code&gt;device&lt;/code&gt;计算结果拷贝到&lt;code&gt;host&lt;/code&gt;，最后释放内存。&lt;/p&gt;
 &lt;p&gt;当然本文写的也是相当简化的一个步骤，CUDA编程相当复杂涉及到很多计算机架构和GPU硬件的知识，比如在涉及到需要经常读取的数据我们就需要用&lt;code&gt;__share__&lt;/code&gt;关键词将数据存储到GPU的共享内存，同样在并行求和时常用的&lt;code&gt;reduce&lt;/code&gt;算法涉及到数据在线程与线程间归并以及数据竞争的问题。&lt;/p&gt;
 &lt;p&gt;CUDA编程相较于传统CPU的串行计算有很大的不同，需要我们用不同的视角看问题，同时看到利用CUDA进行并行计算获得远超CPU串行计算的性能时，获得的成就感还是相当让人兴奋的。&lt;/p&gt;

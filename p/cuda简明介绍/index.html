@@ -314,9 +314,9 @@ GPU架构 我们这里简单介绍一下GPU的架构，上图是H100的架构图
           </ol>
         </li>
         <li><a href="#代码实现">代码实现</a></li>
-        <li><a href="#总结">总结</a></li>
       </ol>
     </li>
+    <li><a href="#总结">总结</a></li>
   </ol>
 </nav>
         </div>
@@ -646,7 +646,7 @@ GPU架构 我们这里简单介绍一下GPU的架构，上图是H100的架构图
 </div><p>这里同样是利用<code>cudaMemcpy</code>这个函数，将<code>device</code>的数据复制到<code>host</code>中，这里并没有显示的用<code>cudaDeviceSynchronize</code>这个API让CPU等待GPU计算完成再计算，<code>cudaMemcpy</code>隐含了同步的操作。</p>
 <p>至此我们已经完成了利用CUDA实现矩阵乘法的流程。如果想看完整代码可以移步我的<a class="link" href="https://github.com/xbunax/cuda_c/blob/main/marix/main.cu"  target="_blank" rel="noopener"
     >代码仓库 </a></p>
-<h3 id="总结">总结</h3>
+<h2 id="总结">总结</h2>
 <p>利用CUDA编程的整体思路还是想当固定的，即为<code>device</code>分配内存，将<code>host</code>数据拷贝到<code>device</code>中，<code>device</code>计算，完成后将<code>device</code>计算结果拷贝到<code>host</code>，最后释放内存。</p>
 <p>当然本文写的也是相当简化的一个步骤，CUDA编程相当复杂涉及到很多计算机架构和GPU硬件的知识，比如在涉及到需要经常读取的数据我们就需要用<code>__share__</code>关键词将数据存储到GPU的共享内存，同样在并行求和时常用的<code>reduce</code>算法涉及到数据在线程与线程间归并以及数据竞争的问题。</p>
 <p>CUDA编程相较于传统CPU的串行计算有很大的不同，需要我们用不同的视角看问题，同时看到利用CUDA进行并行计算获得远超CPU串行计算的性能时，获得的成就感还是相当让人兴奋的。</p>
