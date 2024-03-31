@@ -59,7 +59,7 @@
 &lt;h3 id=&#34;window-manager&#34;&gt;Window Manager&lt;/h3&gt;
 &lt;p&gt;由于苹果的封闭，Mac上的窗口管理器选择并不是很多，&lt;code&gt;yabai&lt;/code&gt;虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且&lt;code&gt;yabai&lt;/code&gt;的主要贡献者只有作者一人，&lt;code&gt;yabai&lt;/code&gt;调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。&lt;/p&gt;
 &lt;p&gt;现在博主主力的window Manager是&lt;code&gt;amethyst&lt;/code&gt;。相比于&lt;code&gt;yabai&lt;/code&gt;的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且&lt;code&gt;amethyst&lt;/code&gt;配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像&lt;code&gt;yabai&lt;/code&gt;设置好&lt;code&gt;yabairc&lt;/code&gt;还需要利用&lt;code&gt;skhd&lt;/code&gt;再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。&lt;/p&gt;
-&lt;p&gt;但是不需要关闭SIP，就意味着相较于&lt;code&gt;yabai&lt;/code&gt;，&lt;code&gt;amethyst&lt;/code&gt;相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是&lt;code&gt;amethyst&lt;/code&gt;作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口。&lt;/p&gt;
+&lt;p&gt;但是不需要关闭SIP，就意味着相较于&lt;code&gt;yabai&lt;/code&gt;，&lt;code&gt;amethyst&lt;/code&gt;相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是&lt;code&gt;amethyst&lt;/code&gt;作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口.&lt;/p&gt;
 </description>
         </item>
         
