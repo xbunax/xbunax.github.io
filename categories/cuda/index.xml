@@ -19,7 +19,7 @@
 &lt;p&gt;CUDA全称Compute Unified Device Architecture，是老黄推出的API，方便开发者调用NVIDIA GPU用来进行大规模并行计算。&lt;/p&gt;
 &lt;p&gt;老黄在&lt;code&gt;Clang&lt;/code&gt;编译器的基础上拓展开发了针对CUDA的编译器&lt;code&gt;NVCC&lt;/code&gt;，所以&lt;code&gt;NVCC&lt;/code&gt;支持大部分&lt;code&gt;C/C++&lt;/code&gt;语法特性同时支持针对CUDA的拓展语法。&lt;/p&gt;
 &lt;h2 id=&#34;如何搭建cuda编程环境&#34;&gt;如何搭建CUDA编程环境&lt;/h2&gt;
-&lt;p&gt;由于NVDIA与开源社区一向水火不容，所以导致N卡在&lt;code&gt;Linux&lt;/code&gt;的兼容性不说完美无缺至少也是丝毫没有，当然这两年由于NVIDIA的数据中心业务水涨船高，老黄也逐渐开源了部分GPU驱动相比于以前已经是好很多了。但是目前来说体验最好的还是用&lt;code&gt;wsl2&lt;/code&gt;搭配&lt;code&gt;vscode&lt;/code&gt;，不需要折腾驱动，几乎是一键安装，同时NVIDIA也提供了docker镜像方便部署维护，具体可以看上一篇配置&lt;code&gt;wsl2&lt;/code&gt;的文章。&lt;/p&gt;
+&lt;p&gt;由于NVIDIA与开源社区一向水火不容，所以导致N卡在&lt;code&gt;Linux&lt;/code&gt;的兼容性不说完美无缺至少也是丝毫没有，当然这两年由于NVIDIA的数据中心业务水涨船高，老黄也逐渐开源了部分GPU驱动相比于以前已经是好很多了。但是目前来说体验最好的还是用&lt;code&gt;wsl2&lt;/code&gt;搭配&lt;code&gt;vscode&lt;/code&gt;，不需要折腾驱动，几乎是一键安装，同时NVIDIA也提供了docker镜像方便部署维护，具体可以看上一篇配置&lt;code&gt;wsl2&lt;/code&gt;的文章。&lt;/p&gt;
 &lt;h2 id=&#34;cuda实现矩阵乘法&#34;&gt;CUDA实现矩阵乘法&lt;/h2&gt;
 &lt;h3 id=&#34;计算机架构&#34;&gt;计算机架构&lt;/h3&gt;
 &lt;h4 id=&#34;计算流程&#34;&gt;计算流程&lt;/h4&gt;
