@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Spotify on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</title>
-        <link>http://localhost:1313/categories/spotify/</link>
+        <link>https://zhumocn.com/categories/spotify/</link>
         <description>Recent content in Spotify on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 05 Apr 2024 11:35:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/spotify/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Apr 2024 11:35:52 +0800</lastBuildDate><atom:link href="https://zhumocn.com/categories/spotify/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Spotify beautify</title>
-        <link>http://localhost:1313/p/spotify-beautify/</link>
+        <link>https://zhumocn.com/p/spotify-beautify/</link>
         <pubDate>Fri, 05 Apr 2024 11:35:52 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/spotify-beautify/</guid>
+        <guid>https://zhumocn.com/p/spotify-beautify/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404051305362.png" alt="Featured image of post Spotify beautify" /&gt;&lt;h1 id=&#34;beautify-spotify-desktop-app&#34;&gt;Beautify Spotify Desktop App&lt;/h1&gt;
 &lt;p&gt;在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了&lt;code&gt;spicetify&lt;/code&gt;这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。&lt;/p&gt;
 &lt;hr&gt;
@@ -185,10 +185,10 @@
         </item>
         <item>
         <title>Spotify Tui</title>
-        <link>http://localhost:1313/p/spotify-tui/</link>
+        <link>https://zhumocn.com/p/spotify-tui/</link>
         <pubDate>Wed, 06 Mar 2024 13:17:22 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/spotify-tui/</guid>
+        <guid>https://zhumocn.com/p/spotify-tui/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/cover.png" alt="Featured image of post Spotify Tui" /&gt;&lt;p&gt;对于使用Spotify作为主力音乐流媒体的人来说，Spotify官方的桌面app体验并不是很好，无法看歌词，而且UI水平对于我个人审美来说感觉并不是很好看。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_desktop.png&#34;
 	
