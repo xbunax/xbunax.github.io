@@ -2,16 +2,346 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</title>
-        <link>https://zhumocn.com/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 14 Apr 2024 13:21:34 +0800</lastBuildDate><atom:link href="https://zhumocn.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Jun 2024 14:01:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Typst Tutorial</title>
+        <link>http://localhost:1313/p/typst-tutorial/</link>
+        <pubDate>Sat, 08 Jun 2024 14:01:20 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/typst-tutorial/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png" alt="Featured image of post Typst Tutorial" /&gt;&lt;h1 id=&#34;typst-tutorial&#34;&gt;Typst tutorial&lt;/h1&gt;
+&lt;h2 id=&#34;typst介绍&#34;&gt;Typst介绍&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;是新的基于标记的科学排版语言其目标是作为&lt;code&gt;LaTex&lt;/code&gt;的替代，因为&lt;code&gt;Typst&lt;/code&gt;底层采用&lt;code&gt;Rust&lt;/code&gt;编写,所以在编译效率上比&lt;code&gt;LaTex&lt;/code&gt;高了非常多，基本上可以做到实时预览并且语法相当友好。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;LaTex&lt;/code&gt;由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用&lt;code&gt;LaTex&lt;/code&gt;排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入&lt;code&gt;bibtex&lt;/code&gt;那么编译时间会极大拉长，只能将&lt;code&gt;LaTex&lt;/code&gt;分章节编译。&lt;/p&gt;
+&lt;p&gt;如果你也苦于&lt;code&gt;LaTex&lt;/code&gt;的以上问题，那么&lt;code&gt;Typst&lt;/code&gt;绝对值得尝试，&lt;code&gt;Typst&lt;/code&gt;于2023年开源开始release，&lt;code&gt;Typst&lt;/code&gt;社区非常活跃，笔者在2023年下半年开始使用，半年时间&lt;code&gt;nvim&lt;/code&gt;和&lt;code&gt;vscode&lt;/code&gt;的全套工具链就已经可用&lt;a class=&#34;link&#34; href=&#34;https://github.com/Myriad-Dreamin/tinymist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;tinymist&lt;/code&gt;&lt;/a&gt;，&lt;a class=&#34;link&#34; href=&#34;https://github.com/Enter-tainer/typstyle/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;typstyle&lt;/code&gt;&lt;/a&gt;，&lt;a class=&#34;link&#34; href=&#34;https://github.com/chomosuke/typst-preview.nvim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;typst-preview&lt;/code&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;typst-语法介绍&#34;&gt;Typst 语法介绍&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;语法上相对&lt;code&gt;LaTex&lt;/code&gt;简洁很多，不需要像&lt;code&gt;LaTex&lt;/code&gt;那样进行&lt;code&gt;\bengin&lt;/code&gt; &lt;code&gt;\end&lt;/code&gt;环境嵌套。&lt;/p&gt;
+&lt;h3 id=&#34;typst添加标题&#34;&gt;Typst添加标题&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;= Introduction ##一级标题
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;== subsection ##二级标题
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;=== subsubsection ##三级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;typst有序和无序列表&#34;&gt;Typst有序和无序列表&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ The climate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - Temperature
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - Precipitation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ The topography
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ The geology
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406091522850.png&#34; width=&#34;50%&#34;/&gt;
+&lt;h3 id=&#34;typst插入图表与引用&#34;&gt;Typst插入图表与引用&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Glaciers as the one shown in
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@glaciers will cease to exist if
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;we don&amp;#39;t take action soon!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#figure(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  image(&amp;#34;glacier.jpg&amp;#34;, width: 70%),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  caption: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    _Glaciers_ form an important part
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    of the earth&amp;#39;s climate system.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;) &amp;lt;glaciers&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406091524014.png&#34; width=&#34;50%&#34;/&gt;
+&lt;h3 id=&#34;typst数学公式&#34;&gt;Typst数学公式&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;数学公式语法并没有学习&lt;code&gt;LaTex&lt;/code&gt;而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$Q = rho A v + C$  ##typst中如果是内联公式就不需要在`$`后空格，反之则是单独一行
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上式就相当于&lt;code&gt;LaTex&lt;/code&gt;中的$Q=\rho A v + C$，如果是复杂一点的公式则可能会更清晰一点比较两者之间的区别。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ 7.32 beta +sum_(i=0)^nabla (Q_i (a_i - epsilon)) / 2 $
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTex&#34; data-lang=&#34;LaTex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7.32 &lt;span class=&#34;k&#34;&gt;\beta&lt;/span&gt; + &lt;span class=&#34;k&#34;&gt;\sum&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{&lt;/span&gt;i=0&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Q&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;i (a&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;i - epsilon)&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;$$
+7.32 \beta + \sum_{i=0}^{\nabla} \frac{Q_i (a_i - epsilon)}{2}
+$$&lt;/p&gt;
+&lt;p&gt;如果是一些特殊符号&lt;code&gt;Typst&lt;/code&gt;则添加了一些OOP的元素比如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ a arrow.squiggly b $
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406091536833.png&#34; width=&#34;50%&#34;/&gt;
+&lt;h3 id=&#34;latex用户快速上手对照表&#34;&gt;LaTex用户快速上手对照表&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;typst&lt;/code&gt;官方也贴心的为&lt;code&gt;LaTex&lt;/code&gt;用户提供了快速的&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/guides/guide-for-latex-users/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;语法对照表&lt;/a&gt;可以查看&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Element&lt;/th&gt;
+&lt;th&gt;LaTeX&lt;/th&gt;
+&lt;th&gt;Typst&lt;/th&gt;
+&lt;th&gt;See&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Strong emphasis&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\textbf{strong}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;*strong*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/strong/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;strong&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emphasis&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\emph{emphasis}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;_emphasis_&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/emph/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;emph&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Monospace / code&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\texttt{print(1)}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;`print(1)`&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/text/raw/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;raw&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Link&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\url{https://typst.app}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://typst.app/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/link/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Label&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\label{intro}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;intro&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/foundations/label/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;label&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Reference&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\ref{intro}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@intro&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/ref/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ref&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Citation&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\cite{humphrey97}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@humphrey97&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/cite/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cite&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bullet list&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;itemize&lt;/code&gt; environment&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;- List&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/list/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;list&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Numbered list&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enumerate&lt;/code&gt; environment&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;+ List&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/enum/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;enum&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Term list&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;description&lt;/code&gt; environment&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/ Term: List&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/terms/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;terms&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Figure&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;figure&lt;/code&gt; environment&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;figure&lt;/code&gt; function&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/figure/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;figure&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Table&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;table&lt;/code&gt; environment&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;table&lt;/code&gt; function&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/model/table/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;table&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Equation&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;$x$, align / equation environments&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;$x$, &lt;/code&gt;$ x = y $`&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/reference/math/equation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;equation&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;typst制作slides&#34;&gt;Typst制作Slides&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;目前制作&lt;code&gt;Slides&lt;/code&gt;的体验比&lt;code&gt;LaTex&lt;/code&gt;制作&lt;code&gt;Beamer&lt;/code&gt;好了很多，我们以&lt;a class=&#34;link&#34; href=&#34;https://github.com/TJ-CSCCG/tongji-slides-typst&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;tongji-slides-typst&lt;/code&gt;&lt;/a&gt;为例简单展示一下&lt;code&gt;Typst&lt;/code&gt;的&lt;code&gt;Slides&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#matrix-slide[
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EXAMPLE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#align(
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DMI效应产生原因&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#v(1em)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DMI是由于反演对称性破缺和&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Spin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Orbit&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Couple&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SOC&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;引起的反对称交换作用&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;在具有非对称晶体结构的材料中，由于原子排列的不均匀性，电子在原子间运动时会经历不均匀的电场。这个不均匀的电场改变了自旋&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;轨道耦合的性质，导致电子的自旋倾向于以特定的方式与其轨道运动相耦合。这种耦合产生了一个优先的方向，使得磁矩倾向于非对易地排列。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#figure(image(&amp;#34;pic/DMI_1.png&amp;#34;, height: 40%), caption: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Dzyaloshinskii&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;–&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Moriya&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;interaction&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#v(1em)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#align(
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DMI效应最早发现于&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;alpha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Fe&amp;#34;&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;_2&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;O&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$反铁磁材料中，实验上发现了弱铁磁性。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Dzyaloshinskii给出了唯象的解释&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;H_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;DM&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dot&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S_i&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;times&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S_j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$，即&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DMI相互作用使相邻磁矩趋于垂直&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Moriya结合超交换理论提出这种效应可以看作是磁绝缘体中SOC以及对称性破缺所引起的附加项&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;在相互交换作用和&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DMI的共同作用下&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，磁矩会趋于形成一定夹角，因此会形成&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SKyrmions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;结构。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#figure(image(&amp;#34;pic/SKyrmion.png&amp;#34;, height: 39%), caption: [`SKyrmions`结构])
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202405181220107.png&#34;/&gt;
+&lt;p&gt;这里是通过模板封装好了&lt;code&gt;#matrix-slide&lt;/code&gt;只需要通过&lt;code&gt;import&lt;/code&gt;调用调用即可。如果是设置封面则只需要调用封装好的函数修改其暴露的接口即可。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#title-slide(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  authors: (&amp;#34;李狗蛋&amp;#34;, &amp;#34;蛋狗李&amp;#34;), title: &amp;#34;Tongji slides typst&amp;#34;, subtitle: &amp;#34;Template&amp;#34;, date: &amp;#34;Date&amp;#34;, institution-name: &amp;#34;Tongji University&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202405181220130.png&#34;/&gt;
+&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;的制作&lt;code&gt;Slides&lt;/code&gt;的体验与代码可读性比&lt;code&gt;LaTex&lt;/code&gt;的环境嵌套要好很多。如果要使用这里推荐&lt;a class=&#34;link&#34; href=&#34;https://github.com/touying-typ/touying&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;touying&lt;/a&gt;这是国人编写的一个&lt;code&gt;Slides&lt;/code&gt;包体验相对较好。&lt;/p&gt;
+&lt;h2 id=&#34;typst当前发展&#34;&gt;Typst当前发展&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;目前已经开放了&lt;a class=&#34;link&#34; href=&#34;https://typst.app/universe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Universe&lt;/code&gt;&lt;/a&gt;提供了各种模板可选，在&lt;code&gt;Typst&lt;/code&gt;社区活跃度较高国人也相对较多，已经有很多优秀的&lt;code&gt;package&lt;/code&gt;是国人编写的。国内高校也有了一些优秀的开源模板项目，比如同济的&lt;a class=&#34;link&#34; href=&#34;https://github.com/TJ-CSCCG/tongji-undergrad-thesis-typst&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;tongji-undergrad-thesis-typst&lt;/code&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;package&lt;/code&gt;这里推荐&lt;a class=&#34;link&#34; href=&#34;https://typst.app/universe/package/mitex&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;miTex&lt;/code&gt;&lt;/a&gt;，如果你实在不习惯用&lt;code&gt;Typst&lt;/code&gt;的公式语法第三方也提供了使用&lt;code&gt;LaTex&lt;/code&gt;的公式接口。
+同时&lt;code&gt;Typst&lt;/code&gt;也支持&lt;a class=&#34;link&#34; href=&#34;https://typst.app/universe/package/cetz/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;cetz&lt;/code&gt;&lt;/a&gt;绘制矢量图。&lt;/p&gt;
+&lt;p&gt;总之&lt;code&gt;Typst&lt;/code&gt;社区还在快速发展中，作为&lt;code&gt;LaTex&lt;/code&gt;的老用户笔者也同时希望在&lt;code&gt;Typst&lt;/code&gt;的竞争下能够更好。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Dragons and Dungeons</title>
-        <link>https://zhumocn.com/p/dragons-and-dungeons/</link>
+        <link>http://localhost:1313/p/dragons-and-dungeons/</link>
         <pubDate>Sun, 14 Apr 2024 13:21:34 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/dragons-and-dungeons/</guid>
+        <guid>http://localhost:1313/p/dragons-and-dungeons/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404141531481.png" alt="Featured image of post Dragons and Dungeons" /&gt;&lt;h2 id=&#34;什么是dnd&#34;&gt;什么是DND&lt;/h2&gt;
 &lt;p&gt;DND全称是&lt;code&gt;Dragons and Dungeons&lt;/code&gt;即龙与地下城的简称，在欧美极为流行的一款TRPG游戏即桌面角色扮演游戏。它首次于1974年由加里·吉盖克斯（Gary Gygax）和戴夫·阿恩森（Dave Arneson）发布，随后由Wizards of the Coast公司（属于Hasbro公司）持续开发和发布。&lt;/p&gt;
 &lt;h3 id=&#34;dnd背景和目标&#34;&gt;DND背景和目标&lt;/h3&gt;
@@ -75,10 +405,10 @@
         </item>
         <item>
         <title>Spotify beautify</title>
-        <link>https://zhumocn.com/p/spotify-beautify/</link>
+        <link>http://localhost:1313/p/spotify-beautify/</link>
         <pubDate>Fri, 05 Apr 2024 11:35:52 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/spotify-beautify/</guid>
+        <guid>http://localhost:1313/p/spotify-beautify/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404051305362.png" alt="Featured image of post Spotify beautify" /&gt;&lt;h1 id=&#34;beautify-spotify-desktop-app&#34;&gt;Beautify Spotify Desktop App&lt;/h1&gt;
 &lt;p&gt;在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了&lt;code&gt;spicetify&lt;/code&gt;这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。&lt;/p&gt;
 &lt;hr&gt;
@@ -252,10 +582,10 @@
         </item>
         <item>
         <title>CUDA简明介绍</title>
-        <link>https://zhumocn.com/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</link>
+        <link>http://localhost:1313/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</link>
         <pubDate>Sun, 31 Mar 2024 11:45:36 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</guid>
+        <guid>http://localhost:1313/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202403311231061.webp" alt="Featured image of post CUDA简明介绍" /&gt;&lt;h1 id=&#34;cuda简明介绍&#34;&gt;CUDA简明介绍&lt;/h1&gt;
 &lt;p&gt;随着AI的兴起，老黄的计算卡一卡难求，在深度学习领域老黄已经几乎事实上达到了垄断的地位。而让老黄成为AI领域那个“卖铲子”的正是CUDA，或者说是围绕CUDA诞生的一系列软件生态。&lt;/p&gt;
 &lt;p&gt;今天就用CUDA实现一个矩阵乘法来简单介绍一下CUDA是如何让GPU突破摩尔定律的以及为什么在AI训练中是如此重要。&lt;/p&gt;
@@ -502,10 +832,10 @@
         </item>
         <item>
         <title>Configwsl</title>
-        <link>https://zhumocn.com/p/configwsl/</link>
+        <link>http://localhost:1313/p/configwsl/</link>
         <pubDate>Sun, 24 Mar 2024 11:37:50 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/configwsl/</guid>
+        <guid>http://localhost:1313/p/configwsl/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202403241154248.webp" alt="Featured image of post Configwsl" /&gt;&lt;p&gt;微软在拥抱开源社区后推出&lt;code&gt;wsl&lt;/code&gt;极大提升了Windows的开发体验，相比双系统&lt;code&gt;wsl&lt;/code&gt;可以动态分配存储空间和内存，并且搭配&lt;code&gt;vscode&lt;/code&gt;可以获得几乎原生&lt;code&gt;Linux&lt;/code&gt;的开发体验。&lt;/p&gt;
 &lt;p&gt;在微软更新&lt;code&gt;wsl2&lt;/code&gt;之后，现在可以与Windows宿主机共用host，不同再去获取&lt;code&gt;wsl2&lt;/code&gt;的动态IP，每次都要手动设置代理，更加方便开发了。&lt;/p&gt;
 &lt;p&gt;本篇博文主要是记录一下在&lt;code&gt;wsl2&lt;/code&gt;中配置深度学习环境。&lt;/p&gt;
@@ -614,10 +944,10 @@
         </item>
         <item>
         <title>Spotify Tui</title>
-        <link>https://zhumocn.com/p/spotify-tui/</link>
+        <link>http://localhost:1313/p/spotify-tui/</link>
         <pubDate>Wed, 06 Mar 2024 13:17:22 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/spotify-tui/</guid>
+        <guid>http://localhost:1313/p/spotify-tui/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/cover.png" alt="Featured image of post Spotify Tui" /&gt;&lt;p&gt;对于使用Spotify作为主力音乐流媒体的人来说，Spotify官方的桌面app体验并不是很好，无法看歌词，而且UI水平对于我个人审美来说感觉并不是很好看。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_desktop.png&#34;
 	
@@ -757,10 +1087,10 @@
         </item>
         <item>
         <title>MyMacWorkflow</title>
-        <link>https://zhumocn.com/p/mymacworkflow/</link>
+        <link>http://localhost:1313/p/mymacworkflow/</link>
         <pubDate>Tue, 05 Mar 2024 17:13:34 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/mymacworkflow/</guid>
+        <guid>http://localhost:1313/p/mymacworkflow/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" alt="Featured image of post MyMacWorkflow" /&gt;&lt;!-- ![cover](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png) --&gt;
 &lt;!-- *spotify tui* --&gt;
 &lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow&lt;/h1&gt;
@@ -813,10 +1143,10 @@
         </item>
         <item>
         <title>First</title>
-        <link>https://zhumocn.com/p/first/</link>
+        <link>http://localhost:1313/p/first/</link>
         <pubDate>Sun, 25 Feb 2024 13:36:38 +0800</pubDate>
         
-        <guid>https://zhumocn.com/p/first/</guid>
+        <guid>http://localhost:1313/p/first/</guid>
         <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
 </description>
         </item>

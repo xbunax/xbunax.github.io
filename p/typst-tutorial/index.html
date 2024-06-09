@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。
+LaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。
+如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。
+Typst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\bengin \end环境嵌套。
+Typst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 &#43; The climate - Temperature - Precipitation &#43; The topography &#43; The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&amp;#39;t take action soon!'>
+<title>Typst Tutorial</title>
+
+<link rel='canonical' href='http://localhost:1313/p/typst-tutorial/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Typst Tutorial'>
+<meta property='og:description' content='Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。
+LaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。
+如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。
+Typst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\bengin \end环境嵌套。
+Typst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 &#43; The climate - Temperature - Precipitation &#43; The topography &#43; The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&amp;#39;t take action soon!'>
+<meta property='og:url' content='http://localhost:1313/p/typst-tutorial/'>
+<meta property='og:site_name' content='𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-08T14:01:20&#43;08:00'/><meta property='article:modified_time' content='2024-06-08T14:01:20&#43;08:00'/><meta property='og:image' content='https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png' />
+<meta name="twitter:title" content="Typst Tutorial">
+<meta name="twitter:description" content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。
+LaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。
+如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。
+Typst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\bengin \end环境嵌套。
+Typst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 &#43; The climate - Temperature - Precipitation &#43; The topography &#43; The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&amp;#39;t take action soon!"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png' />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/cat_hu4a9eb91f90977817f11c7ac5359cc702_107610_300x0_resize_box_3.png" width="300"
+                            height="324" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</a></h1>
+            <h2 class="site-description">𝚃𝚘𝚗𝚐𝚓𝚒 𝚄𝚗𝚒𝚟𝚎𝚛𝚜𝚒𝚝𝚢</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/xbunax'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span></span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="http://localhost:1313/" selected></option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#typst介绍">Typst介绍</a></li>
+    <li><a href="#typst-语法介绍">Typst 语法介绍</a>
+      <ol>
+        <li><a href="#typst添加标题">Typst添加标题</a></li>
+        <li><a href="#typst有序和无序列表">Typst有序和无序列表</a></li>
+        <li><a href="#typst插入图表与引用">Typst插入图表与引用</a></li>
+        <li><a href="#typst数学公式">Typst数学公式</a></li>
+        <li><a href="#latex用户快速上手对照表">LaTex用户快速上手对照表</a></li>
+      </ol>
+    </li>
+    <li><a href="#typst制作slides">Typst制作Slides</a></li>
+    <li><a href="#typst当前发展">Typst当前发展</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/typst-tutorial/">
+                
+                    <img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png" loading="lazy" alt="Featured image of post Typst Tutorial" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/workflow/" >
+                Workflow
+            </a>
+        
+            <a href="/categories/typst/" >
+                Typst
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/typst-tutorial/">Typst Tutorial</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 08, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="typst-tutorial">Typst tutorial</h1>
+<h2 id="typst介绍">Typst介绍</h2>
+<p><code>Typst</code>是新的基于标记的科学排版语言其目标是作为<code>LaTex</code>的替代，因为<code>Typst</code>底层采用<code>Rust</code>编写,所以在编译效率上比<code>LaTex</code>高了非常多，基本上可以做到实时预览并且语法相当友好。</p>
+<p><code>LaTex</code>由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用<code>LaTex</code>排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入<code>bibtex</code>那么编译时间会极大拉长，只能将<code>LaTex</code>分章节编译。</p>
+<p>如果你也苦于<code>LaTex</code>的以上问题，那么<code>Typst</code>绝对值得尝试，<code>Typst</code>于2023年开源开始release，<code>Typst</code>社区非常活跃，笔者在2023年下半年开始使用，半年时间<code>nvim</code>和<code>vscode</code>的全套工具链就已经可用<a class="link" href="https://github.com/Myriad-Dreamin/tinymist"  target="_blank" rel="noopener"
+    ><code>tinymist</code></a>，<a class="link" href="https://github.com/Enter-tainer/typstyle/"  target="_blank" rel="noopener"
+    ><code>typstyle</code></a>，<a class="link" href="https://github.com/chomosuke/typst-preview.nvim"  target="_blank" rel="noopener"
+    ><code>typst-preview</code></a>。</p>
+<h2 id="typst-语法介绍">Typst 语法介绍</h2>
+<p><code>Typst</code>语法上相对<code>LaTex</code>简洁很多，不需要像<code>LaTex</code>那样进行<code>\bengin</code> <code>\end</code>环境嵌套。</p>
+<h3 id="typst添加标题">Typst添加标题</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">= Introduction ##一级标题
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">== subsection ##二级标题
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">=== subsubsection ##三级标题
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="typst有序和无序列表">Typst有序和无序列表</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+ The climate
+</span></span><span class="line"><span class="cl">  - Temperature
+</span></span><span class="line"><span class="cl">  - Precipitation
+</span></span><span class="line"><span class="cl">+ The topography
+</span></span><span class="line"><span class="cl">+ The geology
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091522850.png" width="50%"/>
+<h3 id="typst插入图表与引用">Typst插入图表与引用</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Glaciers as the one shown in
+</span></span><span class="line"><span class="cl">@glaciers will cease to exist if
+</span></span><span class="line"><span class="cl">we don&#39;t take action soon!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#figure(
+</span></span><span class="line"><span class="cl">  image(&#34;glacier.jpg&#34;, width: 70%),
+</span></span><span class="line"><span class="cl">  caption: [
+</span></span><span class="line"><span class="cl">    _Glaciers_ form an important part
+</span></span><span class="line"><span class="cl">    of the earth&#39;s climate system.
+</span></span><span class="line"><span class="cl">  ],
+</span></span><span class="line"><span class="cl">) &lt;glaciers&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091524014.png" width="50%"/>
+<h3 id="typst数学公式">Typst数学公式</h3>
+<p><code>Typst</code>数学公式语法并没有学习<code>LaTex</code>而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$Q = rho A v + C$  ##typst中如果是内联公式就不需要在`$`后空格，反之则是单独一行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上式就相当于<code>LaTex</code>中的$Q=\rho A v + C$，如果是复杂一点的公式则可能会更清晰一点比较两者之间的区别。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ 7.32 beta +sum_(i=0)^nabla (Q_i (a_i - epsilon)) / 2 $
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-LaTex" data-lang="LaTex"><span class="line"><span class="cl">7.32 <span class="k">\beta</span> + <span class="k">\sum</span><span class="nb">_{</span>i=0<span class="nb">}^{</span><span class="k">\nabla</span><span class="nb">}</span> <span class="k">\frac</span><span class="nb">{</span>Q<span class="nb">_</span>i (a<span class="nb">_</span>i - epsilon)<span class="nb">}{</span>2<span class="nb">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>$$
+7.32 \beta + \sum_{i=0}^{\nabla} \frac{Q_i (a_i - epsilon)}{2}
+$$</p>
+<p>如果是一些特殊符号<code>Typst</code>则添加了一些OOP的元素比如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ a arrow.squiggly b $
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091536833.png" width="50%"/>
+<h3 id="latex用户快速上手对照表">LaTex用户快速上手对照表</h3>
+<p><code>typst</code>官方也贴心的为<code>LaTex</code>用户提供了快速的<a class="link" href="https://typst.app/docs/guides/guide-for-latex-users/"  target="_blank" rel="noopener"
+    >语法对照表</a>可以查看</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>LaTeX</th>
+<th>Typst</th>
+<th>See</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strong emphasis</td>
+<td><code>\textbf{strong}</code></td>
+<td><code>*strong*</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/strong/"  target="_blank" rel="noopener"
+    >strong</a></td>
+</tr>
+<tr>
+<td>Emphasis</td>
+<td><code>\emph{emphasis}</code></td>
+<td><code>_emphasis_</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/emph/"  target="_blank" rel="noopener"
+    >emph</a></td>
+</tr>
+<tr>
+<td>Monospace / code</td>
+<td><code>\texttt{print(1)}</code></td>
+<td><code>`print(1)`</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/text/raw/"  target="_blank" rel="noopener"
+    >raw</a></td>
+</tr>
+<tr>
+<td>Link</td>
+<td><code>\url{https://typst.app}</code></td>
+<td><code>https://typst.app/</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/link/"  target="_blank" rel="noopener"
+    >link</a></td>
+</tr>
+<tr>
+<td>Label</td>
+<td><code>\label{intro}</code></td>
+<td><code>&lt;intro&gt;</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/foundations/label/"  target="_blank" rel="noopener"
+    >label</a></td>
+</tr>
+<tr>
+<td>Reference</td>
+<td><code>\ref{intro}</code></td>
+<td><code>@intro</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/ref/"  target="_blank" rel="noopener"
+    >ref</a></td>
+</tr>
+<tr>
+<td>Citation</td>
+<td><code>\cite{humphrey97}</code></td>
+<td><code>@humphrey97</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/cite/"  target="_blank" rel="noopener"
+    >cite</a></td>
+</tr>
+<tr>
+<td>Bullet list</td>
+<td><code>itemize</code> environment</td>
+<td><code>- List</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/list/"  target="_blank" rel="noopener"
+    >list</a></td>
+</tr>
+<tr>
+<td>Numbered list</td>
+<td><code>enumerate</code> environment</td>
+<td><code>+ List</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/enum/"  target="_blank" rel="noopener"
+    >enum</a></td>
+</tr>
+<tr>
+<td>Term list</td>
+<td><code>description</code> environment</td>
+<td><code>/ Term: List</code></td>
+<td><a class="link" href="https://typst.app/docs/reference/model/terms/"  target="_blank" rel="noopener"
+    >terms</a></td>
+</tr>
+<tr>
+<td>Figure</td>
+<td><code>figure</code> environment</td>
+<td><code>figure</code> function</td>
+<td><a class="link" href="https://typst.app/docs/reference/model/figure/"  target="_blank" rel="noopener"
+    >figure</a></td>
+</tr>
+<tr>
+<td>Table</td>
+<td><code>table</code> environment</td>
+<td><code>table</code> function</td>
+<td><a class="link" href="https://typst.app/docs/reference/model/table/"  target="_blank" rel="noopener"
+    >table</a></td>
+</tr>
+<tr>
+<td>Equation</td>
+<td><code>$x$, align / equation environments</code></td>
+<td><code>$x$, </code>$ x = y $`</td>
+<td><a class="link" href="https://typst.app/docs/reference/math/equation/"  target="_blank" rel="noopener"
+    >equation</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="typst制作slides">Typst制作Slides</h2>
+<p><code>Typst</code>目前制作<code>Slides</code>的体验比<code>LaTex</code>制作<code>Beamer</code>好了很多，我们以<a class="link" href="https://github.com/TJ-CSCCG/tongji-slides-typst"  target="_blank" rel="noopener"
+    ><code>tongji-slides-typst</code></a>为例简单展示一下<code>Typst</code>的<code>Slides</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">#matrix-slide[
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">==</span><span class="w"> </span><span class="n">EXAMPLE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#align(
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="n">top</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">left</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">==</span><span class="w"> </span><span class="n">DMI效应产生原因</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">#v(1em)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">DMI是由于反演对称性破缺和</span><span class="o">`</span><span class="n">Spin</span><span class="o">-</span><span class="n">Orbit</span><span class="w"> </span><span class="n">Couple</span><span class="o">`</span><span class="p">(</span><span class="n">SOC</span><span class="p">)</span><span class="err">引起的反对称交换作用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="err">在具有非对称晶体结构的材料中，由于原子排列的不均匀性，电子在原子间运动时会经历不均匀的电场。这个不均匀的电场改变了自旋</span><span class="o">-</span><span class="err">轨道耦合的性质，导致电子的自旋倾向于以特定的方式与其轨道运动相耦合。这种耦合产生了一个优先的方向，使得磁矩倾向于非对易地排列。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">#figure(image(&#34;pic/DMI_1.png&#34;, height: 40%), caption: [
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">Dzyaloshinskii</span><span class="err">–</span><span class="n">Moriya</span><span class="w"> </span><span class="n">interaction</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">])</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">],</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">][</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#v(1em)
+</span></span></span><span class="line"><span class="cl"><span class="c1">#align(
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="n">top</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">left</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">DMI效应最早发现于</span><span class="err">$</span><span class="n">alpha</span><span class="o">-</span><span class="s2">&#34;Fe&#34;</span><span class="sa">_2</span><span class="s2">&#34;O&#34;</span><span class="n">_3</span><span class="err">$反铁磁材料中，实验上发现了弱铁磁性。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Dzyaloshinskii给出了唯象的解释</span><span class="err">$</span><span class="nf">H_</span><span class="p">(</span><span class="s2">&#34;DM&#34;</span><span class="p">)</span><span class="o">=</span><span class="n">D</span><span class="w"> </span><span class="n">dot</span><span class="w"> </span><span class="p">[</span><span class="n">S_i</span><span class="w"> </span><span class="n">times</span><span class="w"> </span><span class="n">S_j</span><span class="p">]</span><span class="err">$，即</span><span class="n">DMI相互作用使相邻磁矩趋于垂直</span><span class="err">。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Moriya结合超交换理论提出这种效应可以看作是磁绝缘体中SOC以及对称性破缺所引起的附加项</span><span class="err">。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="err">在相互交换作用和</span><span class="n">DMI的共同作用下</span><span class="err">，磁矩会趋于形成一定夹角，因此会形成</span><span class="o">`</span><span class="n">SKyrmions</span><span class="o">`</span><span class="err">结构。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">#figure(image(&#34;pic/SKyrmion.png&#34;, height: 39%), caption: [`SKyrmions`结构])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">],</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202405181220107.png"/>
+<p>这里是通过模板封装好了<code>#matrix-slide</code>只需要通过<code>import</code>调用调用即可。如果是设置封面则只需要调用封装好的函数修改其暴露的接口即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#title-slide(
+</span></span><span class="line"><span class="cl">  authors: (&#34;李狗蛋&#34;, &#34;蛋狗李&#34;), title: &#34;Tongji slides typst&#34;, subtitle: &#34;Template&#34;, date: &#34;Date&#34;, institution-name: &#34;Tongji University&#34;,
+</span></span><span class="line"><span class="cl">)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202405181220130.png"/>
+<p><code>Typst</code>的制作<code>Slides</code>的体验与代码可读性比<code>LaTex</code>的环境嵌套要好很多。如果要使用这里推荐<a class="link" href="https://github.com/touying-typ/touying"  target="_blank" rel="noopener"
+    >touying</a>这是国人编写的一个<code>Slides</code>包体验相对较好。</p>
+<h2 id="typst当前发展">Typst当前发展</h2>
+<p><code>Typst</code>目前已经开放了<a class="link" href="https://typst.app/universe/"  target="_blank" rel="noopener"
+    ><code>Universe</code></a>提供了各种模板可选，在<code>Typst</code>社区活跃度较高国人也相对较多，已经有很多优秀的<code>package</code>是国人编写的。国内高校也有了一些优秀的开源模板项目，比如同济的<a class="link" href="https://github.com/TJ-CSCCG/tongji-undergrad-thesis-typst"  target="_blank" rel="noopener"
+    ><code>tongji-undergrad-thesis-typst</code></a>。</p>
+<p><code>package</code>这里推荐<a class="link" href="https://typst.app/universe/package/mitex"  target="_blank" rel="noopener"
+    ><code>miTex</code></a>，如果你实在不习惯用<code>Typst</code>的公式语法第三方也提供了使用<code>LaTex</code>的公式接口。
+同时<code>Typst</code>也支持<a class="link" href="https://typst.app/universe/package/cetz/"  target="_blank" rel="noopener"
+    ><code>cetz</code></a>绘制矢量图。</p>
+<p>总之<code>Typst</code>社区还在快速发展中，作为<code>LaTex</code>的老用户笔者也同时希望在<code>Typst</code>的竞争下能够更好。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/mymacworkflow/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" loading="lazy" data-key="" data-hash="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MyMacWorkflow</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"avatar":"img/cat.png","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"","locale":{"admin":"July"},"placeholder":"","requiredMeta":["name","email","url"],"serverURL":"comments.zhumocn.com","visitor":""});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
