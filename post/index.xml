@@ -115,7 +115,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;$$
-7.32 \beta + \sum_{i=0}^{\nabla} \frac{Q_i (a_i - epsilon)}{2}
+7.32 \beta + \sum_{i=0}^{\nabla} \frac{Q_i (a_i - \epsilon)}{2}
 $$&lt;/p&gt;
 &lt;p&gt;如果是一些特殊符号&lt;code&gt;Typst&lt;/code&gt;则添加了一些OOP的元素比如&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
