@@ -24,9 +24,9 @@
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;spotify-第三方客户端&#34;&gt;Spotify 第三方客户端&lt;/h3&gt;
-&lt;h4 id=&#34;spotify-webui&#34;&gt;Spotify webUI&lt;/h4&gt;
-&lt;p&gt;这时候就要选择第三方的Spotify客户端了，或者也可以使用Spotify的webUI然后使用美化插件，我webUI使用的Arc浏览器搭配上Gallery美化，其实最后的效果还可以，而且很轻量化，除了没法看歌词都很完美。&lt;/p&gt;
+&lt;h3 id=&#34;spotify-第三方客户端&#34;&gt;Spotify 第三方客户端
+&lt;/h3&gt;&lt;h4 id=&#34;spotify-webui&#34;&gt;Spotify webUI
+&lt;/h4&gt;&lt;p&gt;这时候就要选择第三方的Spotify客户端了，或者也可以使用Spotify的webUI然后使用美化插件，我webUI使用的Arc浏览器搭配上Gallery美化，其实最后的效果还可以，而且很轻量化，除了没法看歌词都很完美。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_web.png&#34;
 	
 	
@@ -37,8 +37,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;spotify-tui&#34;&gt;Spotify TUI&lt;/h4&gt;
-&lt;p&gt;但是webUI到底还是官方的UI而且没法看歌词，而且作为重度终端使用者，还是希望在终端上使用Spotify。我选择使用的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/aome510/spotify-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;spotify-tui&#34;&gt;Spotify TUI
+&lt;/h4&gt;&lt;p&gt;但是webUI到底还是官方的UI而且没法看歌词，而且作为重度终端使用者，还是希望在终端上使用Spotify。我选择使用的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/aome510/spotify-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;spotify_player&lt;/code&gt;&lt;/a&gt;一个用rust开发的开源的Spotify TUI，使用vim的键位并且在&lt;code&gt;iTerm2&lt;/code&gt;中可以显示专辑封面，同时也可以在配置文件&lt;code&gt;~/.config/spotify-player/app.toml&lt;/code&gt;中进行自定义。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_tui_playback.png&#34;
 	
@@ -50,8 +50,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;spotify-lyrics&#34;&gt;Spotify Lyrics&lt;/h3&gt;
-&lt;p&gt;接下来要解决官方客户端无法看歌词的问题，我们可以使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/raitonoberu/sptlrx.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;spotify-lyrics&#34;&gt;Spotify Lyrics
+&lt;/h3&gt;&lt;p&gt;接下来要解决官方客户端无法看歌词的问题，我们可以使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/raitonoberu/sptlrx.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;sptlrx&lt;/code&gt;&lt;/a&gt;这个开源的终端歌词同步软件，搭配&lt;code&gt;spotify_player&lt;/code&gt;使用可以看当前歌曲的歌词。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/sptlrx.gif&#34;
 	
@@ -63,8 +63,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;custom-your-tui&#34;&gt;Custom Your TUI&lt;/h3&gt;
-&lt;p&gt;这样我们就实现了在终端上使用Spotify并且显示滚动歌词，同时搭配&lt;a class=&#34;link&#34; href=&#34;https://github.com/karlstav/cava#macos-1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;custom-your-tui&#34;&gt;Custom Your TUI
+&lt;/h3&gt;&lt;p&gt;这样我们就实现了在终端上使用Spotify并且显示滚动歌词，同时搭配&lt;a class=&#34;link&#34; href=&#34;https://github.com/karlstav/cava#macos-1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;cava&lt;/code&gt;&lt;/a&gt;(一个Audio Visualizer，依赖&lt;a class=&#34;link&#34; href=&#34;https://github.com/kyleneideck/BackgroundMusic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;backgroud Music&lt;/code&gt;&lt;/a&gt;实现)，最后使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/xorg62/tty-clock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;tty-clock&lt;/code&gt;&lt;/a&gt;为整个布局点缀一下，就可以实现封面的效果了。&lt;/p&gt;
@@ -78,8 +78,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
-&lt;p&gt;虽然这样布局很不错，但是每次都要手动分屏很麻烦，能不能实现在终端敲一个命令自动分屏布局并且每个&lt;code&gt;pane&lt;/code&gt;自动执行对应的命令呢，当然是可以的啦。&lt;/p&gt;
+&lt;h3 id=&#34;optimization&#34;&gt;Optimization
+&lt;/h3&gt;&lt;p&gt;虽然这样布局很不错，但是每次都要手动分屏很麻烦，能不能实现在终端敲一个命令自动分屏布局并且每个&lt;code&gt;pane&lt;/code&gt;自动执行对应的命令呢，当然是可以的啦。&lt;/p&gt;
 &lt;p&gt;我一开始选择使用&lt;code&gt;tmux&lt;/code&gt;和&lt;code&gt;tmuxp&lt;/code&gt;这样就可以用&lt;code&gt;yml&lt;/code&gt;配置文件写好&lt;code&gt;tmux session&lt;/code&gt;布局并且在对应的&lt;code&gt;pane&lt;/code&gt;执行不同的命令，但是研究了一下&lt;code&gt;tmuxp&lt;/code&gt;发现好像无法实现封面那样的复杂布局，只有几个预设的布局，而且&lt;code&gt;tmux&lt;/code&gt;无法显示超过1M大小的图片所以&lt;code&gt;spotify_player&lt;/code&gt;无法显示图片。&lt;/p&gt;
 &lt;p&gt;所以最后另辟蹊径，使用&lt;code&gt;AppleScript&lt;/code&gt;直接对&lt;code&gt;iTerm2&lt;/code&gt;进行布局。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -157,8 +157,8 @@
         <guid>http://localhost:1313/p/mymacworkflow/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" alt="Featured image of post MyMacWorkflow" /&gt;&lt;!-- ![cover](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png) --&gt;
 &lt;!-- *spotify tui* --&gt;
-&lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow&lt;/h1&gt;
-&lt;p&gt;作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。&lt;/p&gt;
+&lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow
+&lt;/h1&gt;&lt;p&gt;作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Tips：本人专业背景为理论物理，主要科研工作偏向使用&lt;code&gt;Unix-like&lt;/code&gt;系统，所以不会涉及windows(但是可以使用&lt;code&gt;wsl2&lt;/code&gt;)。&lt;/li&gt;
@@ -166,8 +166,8 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;!-- ## Reserch  --&gt;
-&lt;h3 id=&#34;zotero&#34;&gt;Zotero&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;zotero&#34;&gt;Zotero
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。
 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
 &lt;li&gt;同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
@@ -182,8 +182,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;material-project&#34;&gt;Material Project&lt;/h3&gt;
-&lt;p&gt;作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，&lt;a class=&#34;link&#34; href=&#34;https://next-gen.materialsproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;material-project&#34;&gt;Material Project
+&lt;/h3&gt;&lt;p&gt;作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，&lt;a class=&#34;link&#34; href=&#34;https://next-gen.materialsproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MaterialProject&lt;/a&gt;，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了&lt;code&gt;python&lt;/code&gt;的&lt;code&gt;package(pymatgen)&lt;/code&gt;方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。&lt;/p&gt;
 &lt;!-- ![material](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/material.png) --&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202403091438804.png&#34;
@@ -196,11 +196,11 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;pngpaste&#34;&gt;Pngpaste&lt;/h3&gt;
-&lt;p&gt;我的论文写作工具主要是&lt;code&gt;neovim&lt;/code&gt;+&lt;code&gt;latex&lt;/code&gt;，但是由于饱受&lt;code&gt;latex&lt;/code&gt;上古语法困扰最近也在尝试&lt;code&gt;typst&lt;/code&gt;并且得益于&lt;code&gt;neovim&lt;/code&gt;活跃的社区，&lt;code&gt;typst&lt;/code&gt;的&lt;code&gt;lsp&lt;/code&gt;还有双向链接工具已经完全可用了。&lt;/p&gt;
+&lt;h3 id=&#34;pngpaste&#34;&gt;Pngpaste
+&lt;/h3&gt;&lt;p&gt;我的论文写作工具主要是&lt;code&gt;neovim&lt;/code&gt;+&lt;code&gt;latex&lt;/code&gt;，但是由于饱受&lt;code&gt;latex&lt;/code&gt;上古语法困扰最近也在尝试&lt;code&gt;typst&lt;/code&gt;并且得益于&lt;code&gt;neovim&lt;/code&gt;活跃的社区，&lt;code&gt;typst&lt;/code&gt;的&lt;code&gt;lsp&lt;/code&gt;还有双向链接工具已经完全可用了。&lt;/p&gt;
 &lt;p&gt;不管是&lt;code&gt;latex&lt;/code&gt;还是&lt;code&gt;typst&lt;/code&gt;写作时一直有一个痛点那就是插入图片，往往我会将图片截图存在剪贴板中，但是在用&lt;code&gt;neovim&lt;/code&gt;写论文时，经常要切出去保存图片非常影响效率。这时候我们就可以用&lt;code&gt;pngpaste&lt;/code&gt;这个CLI工具，可以在命令行环境下读取剪贴板图片保存为&lt;code&gt;png&lt;/code&gt;格式，这样在&lt;code&gt;neovim&lt;/code&gt;中用&lt;code&gt;toggleterm&lt;/code&gt;插件写一个&lt;code&gt;autocmd&lt;/code&gt;自动保存剪贴板图片，大大提升了效率。&lt;/p&gt;
-&lt;h3 id=&#34;window-manager&#34;&gt;Window Manager&lt;/h3&gt;
-&lt;p&gt;由于苹果的封闭，Mac上的窗口管理器选择并不是很多，&lt;code&gt;yabai&lt;/code&gt;虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且&lt;code&gt;yabai&lt;/code&gt;的主要贡献者只有作者一人，&lt;code&gt;yabai&lt;/code&gt;调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。&lt;/p&gt;
+&lt;h3 id=&#34;window-manager&#34;&gt;Window Manager
+&lt;/h3&gt;&lt;p&gt;由于苹果的封闭，Mac上的窗口管理器选择并不是很多，&lt;code&gt;yabai&lt;/code&gt;虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且&lt;code&gt;yabai&lt;/code&gt;的主要贡献者只有作者一人，&lt;code&gt;yabai&lt;/code&gt;调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。&lt;/p&gt;
 &lt;p&gt;现在博主主力的window Manager是&lt;code&gt;amethyst&lt;/code&gt;。相比于&lt;code&gt;yabai&lt;/code&gt;的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且&lt;code&gt;amethyst&lt;/code&gt;配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像&lt;code&gt;yabai&lt;/code&gt;设置好&lt;code&gt;yabairc&lt;/code&gt;还需要利用&lt;code&gt;skhd&lt;/code&gt;再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。&lt;/p&gt;
 &lt;p&gt;但是不需要关闭SIP，就意味着相较于&lt;code&gt;yabai&lt;/code&gt;，&lt;code&gt;amethyst&lt;/code&gt;相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是&lt;code&gt;amethyst&lt;/code&gt;作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口.&lt;/p&gt;
 </description>

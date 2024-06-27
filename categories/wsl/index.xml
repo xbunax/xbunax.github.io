@@ -16,8 +16,8 @@
 &lt;p&gt;在微软更新&lt;code&gt;wsl2&lt;/code&gt;之后，现在可以与Windows宿主机共用host，不同再去获取&lt;code&gt;wsl2&lt;/code&gt;的动态IP，每次都要手动设置代理，更加方便开发了。&lt;/p&gt;
 &lt;p&gt;本篇博文主要是记录一下在&lt;code&gt;wsl2&lt;/code&gt;中配置深度学习环境。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;install-wsl2&#34;&gt;Install wsl2&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;install-wsl2&#34;&gt;Install wsl2
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;要安装&lt;code&gt;wsl2&lt;/code&gt;首先要在系统服务中打开&lt;code&gt;hyper-V&lt;/code&gt;虚拟化以及&lt;code&gt;Linux sub system&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;在Windows应用商店中搜索&lt;code&gt;Ubuntu&lt;/code&gt;直接安装就可以了。&lt;/li&gt;
 &lt;/ul&gt;
@@ -26,8 +26,8 @@
 &lt;li&gt;因为&lt;code&gt;wsl2&lt;/code&gt;默认安装在C盘，所以可以在poweshell中用&lt;code&gt;wsl&lt;/code&gt;命令将&lt;code&gt;Linux&lt;/code&gt;子系统打包成&lt;code&gt;tar&lt;/code&gt;或者镜像文件，然后export到另外的分区中。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;config-wsl2&#34;&gt;Config wsl2&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;config-wsl2&#34;&gt;Config wsl2
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;首先启动需要设置好&lt;code&gt;username&lt;/code&gt;和&lt;code&gt;passwd&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;

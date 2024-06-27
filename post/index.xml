@@ -6,24 +6,138 @@
         <description>Recent content in Posts on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 08 Jun 2024 14:01:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 27 Jun 2024 10:13:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Build Site</title>
+        <link>http://localhost:1313/p/build-site/</link>
+        <pubDate>Thu, 27 Jun 2024 10:13:40 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/build-site/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406271246388.png" alt="Featured image of post Build Site" /&gt;&lt;h2 id=&#34;short-brief&#34;&gt;Short Brief
+&lt;/h2&gt;&lt;p&gt;我们常常需要展示一些个人作品，简历或者单纯分享，这时候你可以发b站视频，知乎文章，但是更优雅的做法当然是利用GitHub Page做一个自己的网站啦，拥有更强的自定义功能，不需要通过平台的审核，并且如果不需要个人域名的话是完全免费的。&lt;/p&gt;
+&lt;h2 id=&#34;prepare&#34;&gt;Prepare
+&lt;/h2&gt;&lt;p&gt;我们简单介绍一下实现的原理，每个GitHub账号都可以创建一个&lt;code&gt;Username.github.io&lt;/code&gt;这个仓库，可以托管网站并且渲染&lt;code&gt;HTML&lt;/code&gt;文件。&lt;/p&gt;
+&lt;p&gt;所以我们需要一个GitHub账号，如果需要域名访问的话，还需要购买域名。同时因为&lt;code&gt;github.io&lt;/code&gt;是渲染的&lt;code&gt;HTML&lt;/code&gt;，但是写网页用纯html对于我们来说还是太麻烦了，所以我们一般是利用&lt;code&gt;markdown&lt;/code&gt;写文章然后编译成&lt;code&gt;HTML&lt;/code&gt;利用git提交到&lt;code&gt;github.io&lt;/code&gt;仓库，当然这些都有现成的转换工具，笔者习惯用&lt;code&gt;hugo&lt;/code&gt;，之后会介绍如何部署。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要的软件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git以及GitHub账号&lt;/li&gt;
+&lt;li&gt;hugo&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install hugo git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;需要一些命令行操作&lt;code&gt;cd ls&lt;/code&gt;以及git的基础操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;deploy&#34;&gt;Deploy
+&lt;/h2&gt;&lt;p&gt;首先我们在GitHub上创建一个名为&lt;code&gt;Username.github.io&lt;/code&gt;的public仓库，其中&lt;code&gt;Username&lt;/code&gt;是GitHub账号的用户名，并添加&lt;code&gt;README&lt;/code&gt;文件，同时我们再创建一个repo，用来存放整个网站的数据。然后将这个仓库git clone到本地(git clone repo-url)，接着&lt;code&gt;cd&lt;/code&gt;到仓库的文件夹，利用&lt;code&gt;hugo&lt;/code&gt;创建站点，在终端中输入&lt;code&gt;hugo new site /current-repo-path &amp;amp;&amp;amp; hugo&lt;/code&gt;，&lt;code&gt;hugo&lt;/code&gt;会在当前文件夹生成一些文件。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;current-repo-path
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── archetypes 存放用 hugo 命令新建的 Markdown 文件应用的格式模板
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── assets 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── content 存放 hugo 创建的markdown文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── hugo.toml 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── i18n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── layouts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── static 存放静态文件或者图片
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── public 存放 hugo 生成的静态网站的html文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── themes 设置 hugo 的主题
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们就是将生成的public文件夹的文件push到&lt;code&gt;Username.github.io&lt;/code&gt;这个仓库，所以我们可以将GitHub Page的仓库clone到public文件夹&lt;code&gt;git clone https://github.com/Username.github.io public&lt;/code&gt;，或者到public文件夹下面利用&lt;code&gt;git init&lt;/code&gt;命令创建一个本地git仓库，再利用&lt;code&gt;git set remote url&lt;/code&gt;与GitHub上的&lt;code&gt;Usename.github.io&lt;/code&gt;仓库链接。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同时要把hugo的默认配置文件即&lt;code&gt;config/_default/config.toml&lt;/code&gt;中的&lt;code&gt;baseurl&lt;/code&gt;设置成&lt;code&gt;github.io&lt;/code&gt;的仓库链接，如果有域名则设置成域名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;theme&#34;&gt;Theme
+&lt;/h2&gt;&lt;p&gt;我们网页肯定希望有一些美化，可以去&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo官方主题&lt;/a&gt;去找对应的主题，并且对应主题有安装的&lt;code&gt;README&lt;/code&gt;。笔者本人选用的是&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo stack&lt;/a&gt;主题，作者同时也提供了方便部署的仓库，只需要将&lt;code&gt;https://github.com/CaiJimmy/hugo-theme-stack-starter&lt;/code&gt;这个仓库clone到本地就可以了。
+&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406271236171.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;hugo stack&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;release&#34;&gt;Release
+&lt;/h2&gt;&lt;p&gt;接着我们就要发布第一篇文章了，创建一篇新文章的方法即&lt;code&gt;hugo new first.md&lt;/code&gt;，&lt;code&gt;hugo&lt;/code&gt;会在&lt;code&gt;content&lt;/code&gt;目录下创建文章，你可以为这篇文章单独创建一个文件夹放置到&lt;code&gt;content/post/&lt;/code&gt;文件夹下。新创建的&lt;code&gt;markdown&lt;/code&gt;文件头有meta数据以本篇文章为例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;Build Site&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;description: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: 2024-06-27T10:13:40+08:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;image: #设置文章封面
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;math: #是否开启数学公式渲染
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;license: #开源证书
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hidden: false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;comments: true #是否开启评论区这个要单独部署评论区的服务属于进阶用法比较复杂本文章暂不涉及
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft: false #是否是草稿
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;同时你还可以设置文章的分类和标签，如果想要进一步设置可以看作者写的&lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/guide/getting-started&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;文档&lt;/a&gt;。以下是笔者本人设置之后的页面样式。
+&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406271246388.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;my blog&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;summarize&#34;&gt;Summarize
+&lt;/h2&gt;&lt;p&gt;使用静态网站展示个人作品以及分享一些文章是非常方便的事情，只需要让对方访问个人网站即可，并且不需要像动态网站那样需要服务器费用以及维护的精力。笔者本人曾利用&lt;code&gt;wordpress&lt;/code&gt;部署过动态网站，但是发现文章排版相当麻烦而且运营维护还有云服务开销并不划算，所以最后还是放弃了原来的方案，利用GitHub Page部署个人网站。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Typst Tutorial</title>
         <link>http://localhost:1313/p/typst-tutorial/</link>
         <pubDate>Sat, 08 Jun 2024 14:01:20 +0800</pubDate>
         
         <guid>http://localhost:1313/p/typst-tutorial/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png" alt="Featured image of post Typst Tutorial" /&gt;&lt;h1 id=&#34;typst-tutorial&#34;&gt;Typst tutorial&lt;/h1&gt;
-&lt;h2 id=&#34;typst介绍&#34;&gt;Typst介绍&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;是新的基于标记的科学排版语言其目标是作为&lt;code&gt;LaTex&lt;/code&gt;的替代，因为&lt;code&gt;Typst&lt;/code&gt;底层采用&lt;code&gt;Rust&lt;/code&gt;编写,所以在编译效率上比&lt;code&gt;LaTex&lt;/code&gt;高了非常多，基本上可以做到实时预览并且语法相当友好。&lt;/p&gt;
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png" alt="Featured image of post Typst Tutorial" /&gt;&lt;h1 id=&#34;typst-tutorial&#34;&gt;Typst tutorial
+&lt;/h1&gt;&lt;h2 id=&#34;typst介绍&#34;&gt;Typst介绍
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;是新的基于标记的科学排版语言其目标是作为&lt;code&gt;LaTex&lt;/code&gt;的替代，因为&lt;code&gt;Typst&lt;/code&gt;底层采用&lt;code&gt;Rust&lt;/code&gt;编写,所以在编译效率上比&lt;code&gt;LaTex&lt;/code&gt;高了非常多，基本上可以做到实时预览并且语法相当友好。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LaTex&lt;/code&gt;由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用&lt;code&gt;LaTex&lt;/code&gt;排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入&lt;code&gt;bibtex&lt;/code&gt;那么编译时间会极大拉长，只能将&lt;code&gt;LaTex&lt;/code&gt;分章节编译。&lt;/p&gt;
 &lt;p&gt;如果你也苦于&lt;code&gt;LaTex&lt;/code&gt;的以上问题，那么&lt;code&gt;Typst&lt;/code&gt;绝对值得尝试，&lt;code&gt;Typst&lt;/code&gt;于2023年开源开始release，&lt;code&gt;Typst&lt;/code&gt;社区非常活跃，笔者在2023年下半年开始使用，半年时间&lt;code&gt;nvim&lt;/code&gt;和&lt;code&gt;vscode&lt;/code&gt;的全套工具链就已经可用&lt;a class=&#34;link&#34; href=&#34;https://github.com/Myriad-Dreamin/tinymist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;tinymist&lt;/code&gt;&lt;/a&gt;，&lt;a class=&#34;link&#34; href=&#34;https://github.com/Enter-tainer/typstyle/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;typstyle&lt;/code&gt;&lt;/a&gt;，&lt;a class=&#34;link&#34; href=&#34;https://github.com/chomosuke/typst-preview.nvim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;typst-preview&lt;/code&gt;&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;typst-语法介绍&#34;&gt;Typst 语法介绍&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;语法上相对&lt;code&gt;LaTex&lt;/code&gt;简洁很多，不需要像&lt;code&gt;LaTex&lt;/code&gt;那样进行&lt;code&gt;\bengin&lt;/code&gt; &lt;code&gt;\end&lt;/code&gt;环境嵌套。&lt;/p&gt;
-&lt;h3 id=&#34;typst添加标题&#34;&gt;Typst添加标题&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;typst-语法介绍&#34;&gt;Typst 语法介绍
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;语法上相对&lt;code&gt;LaTex&lt;/code&gt;简洁很多，不需要像&lt;code&gt;LaTex&lt;/code&gt;那样进行&lt;code&gt;\bengin&lt;/code&gt; &lt;code&gt;\end&lt;/code&gt;环境嵌套。&lt;/p&gt;
+&lt;h3 id=&#34;typst添加标题&#34;&gt;Typst添加标题
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -39,8 +153,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;=== subsubsection ##三级标题
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;typst有序和无序列表&#34;&gt;Typst有序和无序列表&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;typst有序和无序列表&#34;&gt;Typst有序和无序列表
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -57,8 +171,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406091522850.png&#34; width=&#34;50%&#34;/&gt;
-&lt;h3 id=&#34;typst插入图表与引用&#34;&gt;Typst插入图表与引用&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;typst插入图表与引用&#34;&gt;Typst插入图表与引用
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -87,8 +201,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406091524014.png&#34; width=&#34;50%&#34;/&gt;
-&lt;h3 id=&#34;typst数学公式&#34;&gt;Typst数学公式&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;数学公式语法并没有学习&lt;code&gt;LaTex&lt;/code&gt;而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。&lt;/p&gt;
+&lt;h3 id=&#34;typst数学公式&#34;&gt;Typst数学公式
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;数学公式语法并没有学习&lt;code&gt;LaTex&lt;/code&gt;而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -127,8 +241,8 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202406091536833.png&#34; width=&#34;50%&#34;/&gt;
-&lt;h3 id=&#34;latex用户快速上手对照表&#34;&gt;LaTex用户快速上手对照表&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;typst&lt;/code&gt;官方也贴心的为&lt;code&gt;LaTex&lt;/code&gt;用户提供了快速的&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/guides/guide-for-latex-users/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;latex用户快速上手对照表&#34;&gt;LaTex用户快速上手对照表
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;typst&lt;/code&gt;官方也贴心的为&lt;code&gt;LaTex&lt;/code&gt;用户提供了快速的&lt;a class=&#34;link&#34; href=&#34;https://typst.app/docs/guides/guide-for-latex-users/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;语法对照表&lt;/a&gt;可以查看&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -233,8 +347,8 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;typst制作slides&#34;&gt;Typst制作Slides&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;目前制作&lt;code&gt;Slides&lt;/code&gt;的体验比&lt;code&gt;LaTex&lt;/code&gt;制作&lt;code&gt;Beamer&lt;/code&gt;好了很多，我们以&lt;a class=&#34;link&#34; href=&#34;https://github.com/TJ-CSCCG/tongji-slides-typst&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;typst制作slides&#34;&gt;Typst制作Slides
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;目前制作&lt;code&gt;Slides&lt;/code&gt;的体验比&lt;code&gt;LaTex&lt;/code&gt;制作&lt;code&gt;Beamer&lt;/code&gt;好了很多，我们以&lt;a class=&#34;link&#34; href=&#34;https://github.com/TJ-CSCCG/tongji-slides-typst&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;tongji-slides-typst&lt;/code&gt;&lt;/a&gt;为例简单展示一下&lt;code&gt;Typst&lt;/code&gt;的&lt;code&gt;Slides&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -325,8 +439,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202405181220130.png&#34;/&gt;
 &lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;的制作&lt;code&gt;Slides&lt;/code&gt;的体验与代码可读性比&lt;code&gt;LaTex&lt;/code&gt;的环境嵌套要好很多。如果要使用这里推荐&lt;a class=&#34;link&#34; href=&#34;https://github.com/touying-typ/touying&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;touying&lt;/a&gt;这是国人编写的一个&lt;code&gt;Slides&lt;/code&gt;包体验相对较好。&lt;/p&gt;
-&lt;h2 id=&#34;typst当前发展&#34;&gt;Typst当前发展&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;目前已经开放了&lt;a class=&#34;link&#34; href=&#34;https://typst.app/universe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;typst当前发展&#34;&gt;Typst当前发展
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;目前已经开放了&lt;a class=&#34;link&#34; href=&#34;https://typst.app/universe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;Universe&lt;/code&gt;&lt;/a&gt;提供了各种模板可选，在&lt;code&gt;Typst&lt;/code&gt;社区活跃度较高国人也相对较多，已经有很多优秀的&lt;code&gt;package&lt;/code&gt;是国人编写的。国内高校也有了一些优秀的开源模板项目，比如同济的&lt;a class=&#34;link&#34; href=&#34;https://github.com/TJ-CSCCG/tongji-undergrad-thesis-typst&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;tongji-undergrad-thesis-typst&lt;/code&gt;&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;package&lt;/code&gt;这里推荐&lt;a class=&#34;link&#34; href=&#34;https://typst.app/universe/package/mitex&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -342,13 +456,13 @@ $$&lt;/p&gt;
         <pubDate>Sun, 14 Apr 2024 13:21:34 +0800</pubDate>
         
         <guid>http://localhost:1313/p/dragons-and-dungeons/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404141531481.png" alt="Featured image of post Dragons and Dungeons" /&gt;&lt;h2 id=&#34;什么是dnd&#34;&gt;什么是DND&lt;/h2&gt;
-&lt;p&gt;DND全称是&lt;code&gt;Dragons and Dungeons&lt;/code&gt;即龙与地下城的简称，在欧美极为流行的一款TRPG游戏即桌面角色扮演游戏。它首次于1974年由加里·吉盖克斯（Gary Gygax）和戴夫·阿恩森（Dave Arneson）发布，随后由Wizards of the Coast公司（属于Hasbro公司）持续开发和发布。&lt;/p&gt;
-&lt;h3 id=&#34;dnd背景和目标&#34;&gt;DND背景和目标&lt;/h3&gt;
-&lt;p&gt;DND设置在一个充满魔法、怪兽以及英雄的幻想世界中。玩家们扮演的角色各具特色，例如战士、巫师、牧师和盗贼等。这些角色组成一个团队，一起冒险、解谜、战斗和探索各种神秘地点。&lt;/p&gt;
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404141531481.png" alt="Featured image of post Dragons and Dungeons" /&gt;&lt;h2 id=&#34;什么是dnd&#34;&gt;什么是DND
+&lt;/h2&gt;&lt;p&gt;DND全称是&lt;code&gt;Dragons and Dungeons&lt;/code&gt;即龙与地下城的简称，在欧美极为流行的一款TRPG游戏即桌面角色扮演游戏。它首次于1974年由加里·吉盖克斯（Gary Gygax）和戴夫·阿恩森（Dave Arneson）发布，随后由Wizards of the Coast公司（属于Hasbro公司）持续开发和发布。&lt;/p&gt;
+&lt;h3 id=&#34;dnd背景和目标&#34;&gt;DND背景和目标
+&lt;/h3&gt;&lt;p&gt;DND设置在一个充满魔法、怪兽以及英雄的幻想世界中。玩家们扮演的角色各具特色，例如战士、巫师、牧师和盗贼等。这些角色组成一个团队，一起冒险、解谜、战斗和探索各种神秘地点。&lt;/p&gt;
 &lt;p&gt;经过几十年的世界观拓展和开发，DND已经是一款细致到地图上每一片街道都有自己的历史的拥有庞大世界观的世界。&lt;/p&gt;
-&lt;h3 id=&#34;博德之门3与dnd&#34;&gt;博德之门3与DND&lt;/h3&gt;
-&lt;p&gt;博主本人也是由博德之门3才入坑CRPG，由此了解了DND。博德之门3是基于DND5E规则(即DND的第五版规则，相对来说是比较简化适合新人的规则)，同时拉瑞安也在5E的规则上添加了自己房规使之更适合电子游戏。&lt;/p&gt;
+&lt;h3 id=&#34;博德之门3与dnd&#34;&gt;博德之门3与DND
+&lt;/h3&gt;&lt;p&gt;博主本人也是由博德之门3才入坑CRPG，由此了解了DND。博德之门3是基于DND5E规则(即DND的第五版规则，相对来说是比较简化适合新人的规则)，同时拉瑞安也在5E的规则上添加了自己房规使之更适合电子游戏。&lt;/p&gt;
 &lt;p&gt;相对于其他电子游戏，博德之门3所提供的自由度已经相当可观了，但是在线下DND跑团中，自由度更胜一筹，你可以做你想做的任何事情，能够限制你的只有游戏规则以及你的想象力了。&lt;/p&gt;
 &lt;p&gt;比如在线下DND中吟游诗人有一个可选戏法魔法伎俩
 &lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202404141345219.png&#34;
@@ -362,15 +476,15 @@ $$&lt;/p&gt;
 	
 &gt;
 光看这个戏法描述就可以知道这个戏法有多少骚操作可开发了，事实证明在博主的线下跑团中这个戏法真的太能整活了。&lt;/p&gt;
-&lt;h2 id=&#34;线下跑团流程&#34;&gt;线下跑团流程&lt;/h2&gt;
-&lt;h3 id=&#34;开团准备过程&#34;&gt;开团准备过程&lt;/h3&gt;
-&lt;p&gt;想要线下跑团最重要的是要能找到能够和你一起跑团的朋友以及DM即&lt;code&gt;Dungeon Master&lt;/code&gt;地下城城主，可以把他当成一个熟悉DND规则主持人。&lt;/p&gt;
+&lt;h2 id=&#34;线下跑团流程&#34;&gt;线下跑团流程
+&lt;/h2&gt;&lt;h3 id=&#34;开团准备过程&#34;&gt;开团准备过程
+&lt;/h3&gt;&lt;p&gt;想要线下跑团最重要的是要能找到能够和你一起跑团的朋友以及DM即&lt;code&gt;Dungeon Master&lt;/code&gt;地下城城主，可以把他当成一个熟悉DND规则主持人。&lt;/p&gt;
 &lt;p&gt;通常第一步是最难的，在如今的社会环境下能够凑够这样一群人一起跑团就是一件相当不容易的事情了。而要找到一个合适的DM更是相当难了，在博主本人所在的上海能够开DND的团本的桌游店都是相当少了。&lt;/p&gt;
-&lt;h3 id=&#34;游戏前准备过程&#34;&gt;游戏前准备过程&lt;/h3&gt;
-&lt;p&gt;如果你相当幸运能够找到一个DM以及一群能和你进入DND世界冒险的朋友，那恭喜你，你已经迈出了相当困难的一步。&lt;/p&gt;
+&lt;h3 id=&#34;游戏前准备过程&#34;&gt;游戏前准备过程
+&lt;/h3&gt;&lt;p&gt;如果你相当幸运能够找到一个DM以及一群能和你进入DND世界冒险的朋友，那恭喜你，你已经迈出了相当困难的一步。&lt;/p&gt;
 &lt;p&gt;在开团前你需要对DND的规则有一个大体上的了解，你需要一本玩家手册(你可以在GitHub上找到)，里面介绍了DND世界下的各种规则，不同的职业种族，施法的条件，各种检定的条件等等。当然如果是新手局DM通常会在开始前给你介绍一下大体的规则，并且在游玩的过程中给予适当的帮助，通常新手局的DM比较宽容。&lt;/p&gt;
-&lt;h3 id=&#34;车卡&#34;&gt;车卡&lt;/h3&gt;
-&lt;p&gt;好了你已经读完玩家手册，你已经对这个游戏的规则有所了解了。接下来你要创建一个角色进入这个世界冒险，这是相当重要的一环，在创建角色前，你要想好在这个冒险中你想要当什么角色，你是想当一个所过之处四处偷窃的盗贼，还是想当一个将誓言视为生命的圣武士，又或者是想当一个花言巧语的吟游诗人。&lt;/p&gt;
+&lt;h3 id=&#34;车卡&#34;&gt;车卡
+&lt;/h3&gt;&lt;p&gt;好了你已经读完玩家手册，你已经对这个游戏的规则有所了解了。接下来你要创建一个角色进入这个世界冒险，这是相当重要的一环，在创建角色前，你要想好在这个冒险中你想要当什么角色，你是想当一个所过之处四处偷窃的盗贼，还是想当一个将誓言视为生命的圣武士，又或者是想当一个花言巧语的吟游诗人。&lt;/p&gt;
 &lt;p&gt;通常一个角色由一下几个部分构成，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;职业，通常可选野蛮人，战士，吟游诗人，游侠，盗贼，德鲁伊，圣武士，牧师，法师，术士，邪术师，武僧&lt;/li&gt;
@@ -391,15 +505,15 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;开始游玩&#34;&gt;开始游玩&lt;/h3&gt;
-&lt;p&gt;到了这步，恭喜你你已经正式踏入冒险的旅程了，如果是4小时的短本这时候DM会通过语言描述一个初始场景，并给出冒险的目标。
+&lt;h3 id=&#34;开始游玩&#34;&gt;开始游玩
+&lt;/h3&gt;&lt;p&gt;到了这步，恭喜你你已经正式踏入冒险的旅程了，如果是4小时的短本这时候DM会通过语言描述一个初始场景，并给出冒险的目标。
 接下来就靠你和你的队友以及你们的想象力开始冒险啦。&lt;/p&gt;
 &lt;p&gt;这里记录博主在跑团中遇到的&amp;quot;骚操作&amp;quot;，博主跑团的队伍是一个盗贼，一个圣武士，一个牧师，一个吟游诗人还有一个野蛮人，博主本人扮演的是吟游诗人，开卡选的戏法是魔法伎俩和恶言相向，一环法术是魅惑人类和塔莎狂笑术。&lt;/p&gt;
 &lt;p&gt;在一个马戏团中，有个小丑抓住了圣武士的裤子，圣武士想抓住小丑的手想拿开，但是圣武士没有通过力量检定(乐，裤子以及腰带被扯下来了，我作为吟游诗人用魔法伎俩加热腰带上的铁块，然后让小丑丢弃，圣武士又拿回来了他的裤子。不过这个比较赖皮，因为这个是4环炙热武器的效果，如果DM比较严格可能就无法达成。&lt;/p&gt;
 &lt;p&gt;接着我们到了一个游玩项目，挑战内容是需要喝下一杯肮脏的&amp;quot;恒河水&amp;quot;，如果挑战成功则可以获得50金币。于是我和盗贼商量，让他假装喝下&amp;quot;恒河水&amp;quot;我利用魔法伎俩创造一杯清水调包，最后盗贼通过一个巧手检定偷天幻日成功，成功获得了50金币。&lt;/p&gt;
 &lt;p&gt;当然也有倒霉时刻，在做主线任务时，见到了一个关键的法阵，需要每个人过一个宗教或者奥秘检定，结果全队五个人两大失败(即roll出了1点)，剩下三个也是没有通过检定，最后这一场战斗全程一头雾水通过。&lt;/p&gt;
-&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;DND跑团的魅力在于你能将自己的想象力投射到那个虚拟世界中，可以做出很多骚操作，如果还有队友配合，真的非常欢乐。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;DND跑团的魅力在于你能将自己的想象力投射到那个虚拟世界中，可以做出很多骚操作，如果还有队友配合，真的非常欢乐。&lt;/p&gt;
 &lt;p&gt;与其说DND是一款游戏，更不如说是你和你的队友以及DM合力完成一段故事，路途上的各种冒险才是真正的令人难忘。&lt;/p&gt;
 </description>
         </item>
@@ -409,11 +523,11 @@ $$&lt;/p&gt;
         <pubDate>Fri, 05 Apr 2024 11:35:52 +0800</pubDate>
         
         <guid>http://localhost:1313/p/spotify-beautify/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404051305362.png" alt="Featured image of post Spotify beautify" /&gt;&lt;h1 id=&#34;beautify-spotify-desktop-app&#34;&gt;Beautify Spotify Desktop App&lt;/h1&gt;
-&lt;p&gt;在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了&lt;code&gt;spicetify&lt;/code&gt;这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。&lt;/p&gt;
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202404051305362.png" alt="Featured image of post Spotify beautify" /&gt;&lt;h1 id=&#34;beautify-spotify-desktop-app&#34;&gt;Beautify Spotify Desktop App
+&lt;/h1&gt;&lt;p&gt;在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了&lt;code&gt;spicetify&lt;/code&gt;这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;install-and-uninstall&#34;&gt;Install and Uninstall&lt;/h2&gt;
-&lt;p&gt;如果是Mac和Linux推荐使用包管理器安装在终端输入&lt;/p&gt;
+&lt;h2 id=&#34;install-and-uninstall&#34;&gt;Install and Uninstall
+&lt;/h2&gt;&lt;p&gt;如果是Mac和Linux推荐使用包管理器安装在终端输入&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -444,8 +558,8 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf ~/.config/spicetify
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;prepare&#34;&gt;Prepare&lt;/h2&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;prepare&#34;&gt;Prepare
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;首先在终端中输入
 &lt;code&gt;spicetify&lt;/code&gt;
@@ -466,8 +580,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;在每次更改&lt;code&gt;theme&lt;/code&gt;和&lt;code&gt;color&lt;/code&gt;后要需要执行一下&lt;code&gt;spicetify apply&lt;/code&gt;以应用。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;customize&#34;&gt;Customize&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;customize&#34;&gt;Customize
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -490,8 +604,8 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这是&lt;code&gt;spicetify&lt;/code&gt;配置文件的结构，我们主要修改的就是&lt;code&gt;config-xpui.ini&lt;/code&gt;这个文件，当然也可以直接通过命令行修改。&lt;/p&gt;
-&lt;h3 id=&#34;customize-theme-and-color&#34;&gt;customize theme and color&lt;/h3&gt;
-&lt;p&gt;接着就可以设置Spotify的主题以及配色啦。可以在这里找到官方提供的主题库&lt;a class=&#34;link&#34; href=&#34;https://github.com/spicetify/spicetify-themes/blob/master/THEMES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;customize-theme-and-color&#34;&gt;customize theme and color
+&lt;/h3&gt;&lt;p&gt;接着就可以设置Spotify的主题以及配色啦。可以在这里找到官方提供的主题库&lt;a class=&#34;link&#34; href=&#34;https://github.com/spicetify/spicetify-themes/blob/master/THEMES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;THEME.MD&lt;/code&gt;&lt;/a&gt;，以及第三方提供的&lt;a class=&#34;link&#34; href=&#34;https://spicetify.app/docs/advanced-usage/themes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;主题方案&lt;/a&gt;。&lt;/p&gt;
 &lt;ul&gt;
@@ -521,8 +635,8 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;设置好后同样要用&lt;code&gt;spicetify apply&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;apply-extensions&#34;&gt;apply extensions&lt;/h3&gt;
-&lt;p&gt;目前官方提供的插件数量还较少，可以在&lt;a class=&#34;link&#34; href=&#34;https://spicetify.app/docs/advanced-usage/extensions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;apply-extensions&#34;&gt;apply extensions
+&lt;/h3&gt;&lt;p&gt;目前官方提供的插件数量还较少，可以在&lt;a class=&#34;link&#34; href=&#34;https://spicetify.app/docs/advanced-usage/extensions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Extensions&lt;/a&gt;中找到。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;与设置主题类似，可以在命令中自动安装&lt;/li&gt;
@@ -555,8 +669,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;同样要&lt;code&gt;spicetify apply&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;目前用下来&lt;code&gt;Full App Display&lt;/code&gt;这款插件还不错，可以全屏显示歌曲信息，还有&lt;code&gt;Pop-up Lyrics&lt;/code&gt;这款插件可以显示歌词。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;show-case&#34;&gt;Show case&lt;/h2&gt;
-&lt;p&gt;个人感觉&lt;code&gt;Dribbblish&lt;/code&gt;的&lt;code&gt;Nord-Dark&lt;/code&gt;和&lt;code&gt;Gruvbox&lt;/code&gt;配色和主题还不错&lt;/p&gt;
+&lt;h2 id=&#34;show-case&#34;&gt;Show case
+&lt;/h2&gt;&lt;p&gt;个人感觉&lt;code&gt;Dribbblish&lt;/code&gt;的&lt;code&gt;Nord-Dark&lt;/code&gt;和&lt;code&gt;Gruvbox&lt;/code&gt;配色和主题还不错&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202404051309961.png&#34;
 	
 	
@@ -586,18 +700,18 @@ $$&lt;/p&gt;
         <pubDate>Sun, 31 Mar 2024 11:45:36 +0800</pubDate>
         
         <guid>http://localhost:1313/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202403311231061.webp" alt="Featured image of post CUDA简明介绍" /&gt;&lt;h1 id=&#34;cuda简明介绍&#34;&gt;CUDA简明介绍&lt;/h1&gt;
-&lt;p&gt;随着AI的兴起，老黄的计算卡一卡难求，在深度学习领域老黄已经几乎事实上达到了垄断的地位。而让老黄成为AI领域那个“卖铲子”的正是CUDA，或者说是围绕CUDA诞生的一系列软件生态。&lt;/p&gt;
+        <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202403311231061.webp" alt="Featured image of post CUDA简明介绍" /&gt;&lt;h1 id=&#34;cuda简明介绍&#34;&gt;CUDA简明介绍
+&lt;/h1&gt;&lt;p&gt;随着AI的兴起，老黄的计算卡一卡难求，在深度学习领域老黄已经几乎事实上达到了垄断的地位。而让老黄成为AI领域那个“卖铲子”的正是CUDA，或者说是围绕CUDA诞生的一系列软件生态。&lt;/p&gt;
 &lt;p&gt;今天就用CUDA实现一个矩阵乘法来简单介绍一下CUDA是如何让GPU突破摩尔定律的以及为什么在AI训练中是如此重要。&lt;/p&gt;
-&lt;h2 id=&#34;cuda是什么&#34;&gt;CUDA是什么&lt;/h2&gt;
-&lt;p&gt;CUDA全称Compute Unified Device Architecture，是老黄推出的API，方便开发者调用NVIDIA GPU用来进行大规模并行计算。&lt;/p&gt;
+&lt;h2 id=&#34;cuda是什么&#34;&gt;CUDA是什么
+&lt;/h2&gt;&lt;p&gt;CUDA全称Compute Unified Device Architecture，是老黄推出的API，方便开发者调用NVIDIA GPU用来进行大规模并行计算。&lt;/p&gt;
 &lt;p&gt;老黄在&lt;code&gt;Clang&lt;/code&gt;编译器的基础上拓展开发了针对CUDA的编译器&lt;code&gt;NVCC&lt;/code&gt;，所以&lt;code&gt;NVCC&lt;/code&gt;支持大部分&lt;code&gt;C/C++&lt;/code&gt;语法特性同时支持针对CUDA的拓展语法。&lt;/p&gt;
-&lt;h2 id=&#34;如何搭建cuda编程环境&#34;&gt;如何搭建CUDA编程环境&lt;/h2&gt;
-&lt;p&gt;由于NVIDIA与开源社区一向水火不容，所以导致N卡在&lt;code&gt;Linux&lt;/code&gt;的兼容性不说完美无缺至少也是丝毫没有，当然这两年由于NVIDIA的数据中心业务水涨船高，老黄也逐渐开源了部分GPU驱动相比于以前已经是好很多了。但是目前来说体验最好的还是用&lt;code&gt;wsl2&lt;/code&gt;搭配&lt;code&gt;vscode&lt;/code&gt;，不需要折腾驱动，几乎是一键安装，同时NVIDIA也提供了docker镜像方便部署维护，具体可以看上一篇配置&lt;code&gt;wsl2&lt;/code&gt;的文章。&lt;/p&gt;
-&lt;h2 id=&#34;cuda实现矩阵乘法&#34;&gt;CUDA实现矩阵乘法&lt;/h2&gt;
-&lt;h3 id=&#34;计算机架构&#34;&gt;计算机架构&lt;/h3&gt;
-&lt;h4 id=&#34;计算流程&#34;&gt;计算流程&lt;/h4&gt;
-&lt;p&gt;在使用CUDA编程前，我们需要对计算机架构需要有一个了解。&lt;/p&gt;
+&lt;h2 id=&#34;如何搭建cuda编程环境&#34;&gt;如何搭建CUDA编程环境
+&lt;/h2&gt;&lt;p&gt;由于NVIDIA与开源社区一向水火不容，所以导致N卡在&lt;code&gt;Linux&lt;/code&gt;的兼容性不说完美无缺至少也是丝毫没有，当然这两年由于NVIDIA的数据中心业务水涨船高，老黄也逐渐开源了部分GPU驱动相比于以前已经是好很多了。但是目前来说体验最好的还是用&lt;code&gt;wsl2&lt;/code&gt;搭配&lt;code&gt;vscode&lt;/code&gt;，不需要折腾驱动，几乎是一键安装，同时NVIDIA也提供了docker镜像方便部署维护，具体可以看上一篇配置&lt;code&gt;wsl2&lt;/code&gt;的文章。&lt;/p&gt;
+&lt;h2 id=&#34;cuda实现矩阵乘法&#34;&gt;CUDA实现矩阵乘法
+&lt;/h2&gt;&lt;h3 id=&#34;计算机架构&#34;&gt;计算机架构
+&lt;/h3&gt;&lt;h4 id=&#34;计算流程&#34;&gt;计算流程
+&lt;/h4&gt;&lt;p&gt;在使用CUDA编程前，我们需要对计算机架构需要有一个了解。&lt;/p&gt;
 &lt;p&gt;一般来说计算机计算，遵循如下流程
 &lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202403311523383.png&#34;
 	
@@ -625,8 +739,8 @@ $$&lt;/p&gt;
 	
 &gt;
 在程序运行过程中可以理解为CPU与GPU是异步的，两者通过&lt;code&gt;PCIE&lt;/code&gt;通道通信，CPU调用&lt;code&gt;kernel&lt;/code&gt;函数后后并不会等待GPU计算结束再继续而是直接继续运行。&lt;/p&gt;
-&lt;h4 id=&#34;gpu架构&#34;&gt;GPU架构&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202403311407416.png&#34;
+&lt;h4 id=&#34;gpu架构&#34;&gt;GPU架构
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202403311407416.png&#34;
 	
 	
 	
@@ -638,8 +752,8 @@ $$&lt;/p&gt;
 &gt;
 我们这里简单介绍一下GPU的架构，上图是H100的架构图。整个H100有8组GPC，每组GPC有9组TPC，每组TPC又有两组SM，而每组SM又有144个CUDA Tensor，共有18432个CUDA Tensor以及两组24MB的L2缓存。同时由于H100是计算专用卡，所以老黄只留了一组光栅单元，打游戏是基本没戏了。&lt;/p&gt;
 &lt;p&gt;这里每个CUDA Tensor都可以看成是一个CPU核心，但是相比于CPU核心CUDA Tensor不能做复杂的逻辑运算，适合做大规模的并行计算，尤其是适合做矩阵运算。&lt;/p&gt;
-&lt;h3 id=&#34;代码实现&#34;&gt;代码实现&lt;/h3&gt;
-&lt;p&gt;我这里使用&lt;code&gt;CUDA C/C++&lt;/code&gt;来实现矩阵的乘法。&lt;/p&gt;
+&lt;h3 id=&#34;代码实现&#34;&gt;代码实现
+&lt;/h3&gt;&lt;p&gt;我这里使用&lt;code&gt;CUDA C/C++&lt;/code&gt;来实现矩阵的乘法。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -824,8 +938,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;这里同样是利用&lt;code&gt;cudaMemcpy&lt;/code&gt;这个函数，将&lt;code&gt;device&lt;/code&gt;的数据复制到&lt;code&gt;host&lt;/code&gt;中，这里并没有显示的用&lt;code&gt;cudaDeviceSynchronize&lt;/code&gt;这个API让CPU等待GPU计算完成再计算，&lt;code&gt;cudaMemcpy&lt;/code&gt;隐含了同步的操作。&lt;/p&gt;
 &lt;p&gt;至此我们已经完成了利用CUDA实现矩阵乘法的流程。如果想看完整代码可以移步我的&lt;a class=&#34;link&#34; href=&#34;https://github.com/xbunax/cuda_c/blob/main/marix/main.cu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;代码仓库 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;利用CUDA编程的整体思路还是想当固定的，即为&lt;code&gt;device&lt;/code&gt;分配内存，将&lt;code&gt;host&lt;/code&gt;数据拷贝到&lt;code&gt;device&lt;/code&gt;中，&lt;code&gt;device&lt;/code&gt;计算，完成后将&lt;code&gt;device&lt;/code&gt;计算结果拷贝到&lt;code&gt;host&lt;/code&gt;，最后释放内存。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;利用CUDA编程的整体思路还是想当固定的，即为&lt;code&gt;device&lt;/code&gt;分配内存，将&lt;code&gt;host&lt;/code&gt;数据拷贝到&lt;code&gt;device&lt;/code&gt;中，&lt;code&gt;device&lt;/code&gt;计算，完成后将&lt;code&gt;device&lt;/code&gt;计算结果拷贝到&lt;code&gt;host&lt;/code&gt;，最后释放内存。&lt;/p&gt;
 &lt;p&gt;当然本文写的也是相当简化的一个步骤，CUDA编程相当复杂涉及到很多计算机架构和GPU硬件的知识，比如在涉及到需要经常读取的数据我们就需要用&lt;code&gt;__share__&lt;/code&gt;关键词将数据存储到GPU的共享内存，同样在并行求和时常用的&lt;code&gt;reduce&lt;/code&gt;算法涉及到数据在线程与线程间归并以及数据竞争的问题。&lt;/p&gt;
 &lt;p&gt;CUDA编程相较于传统CPU的串行计算有很大的不同，需要我们用不同的视角看问题，同时看到利用CUDA进行并行计算获得远超CPU串行计算的性能时，获得的成就感还是相当让人兴奋的。&lt;/p&gt;
 </description>
@@ -840,8 +954,8 @@ $$&lt;/p&gt;
 &lt;p&gt;在微软更新&lt;code&gt;wsl2&lt;/code&gt;之后，现在可以与Windows宿主机共用host，不同再去获取&lt;code&gt;wsl2&lt;/code&gt;的动态IP，每次都要手动设置代理，更加方便开发了。&lt;/p&gt;
 &lt;p&gt;本篇博文主要是记录一下在&lt;code&gt;wsl2&lt;/code&gt;中配置深度学习环境。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;install-wsl2&#34;&gt;Install wsl2&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;install-wsl2&#34;&gt;Install wsl2
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;要安装&lt;code&gt;wsl2&lt;/code&gt;首先要在系统服务中打开&lt;code&gt;hyper-V&lt;/code&gt;虚拟化以及&lt;code&gt;Linux sub system&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;在Windows应用商店中搜索&lt;code&gt;Ubuntu&lt;/code&gt;直接安装就可以了。&lt;/li&gt;
 &lt;/ul&gt;
@@ -850,8 +964,8 @@ $$&lt;/p&gt;
 &lt;li&gt;因为&lt;code&gt;wsl2&lt;/code&gt;默认安装在C盘，所以可以在poweshell中用&lt;code&gt;wsl&lt;/code&gt;命令将&lt;code&gt;Linux&lt;/code&gt;子系统打包成&lt;code&gt;tar&lt;/code&gt;或者镜像文件，然后export到另外的分区中。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;config-wsl2&#34;&gt;Config wsl2&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;config-wsl2&#34;&gt;Config wsl2
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;首先启动需要设置好&lt;code&gt;username&lt;/code&gt;和&lt;code&gt;passwd&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -960,9 +1074,9 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;spotify-第三方客户端&#34;&gt;Spotify 第三方客户端&lt;/h3&gt;
-&lt;h4 id=&#34;spotify-webui&#34;&gt;Spotify webUI&lt;/h4&gt;
-&lt;p&gt;这时候就要选择第三方的Spotify客户端了，或者也可以使用Spotify的webUI然后使用美化插件，我webUI使用的Arc浏览器搭配上Gallery美化，其实最后的效果还可以，而且很轻量化，除了没法看歌词都很完美。&lt;/p&gt;
+&lt;h3 id=&#34;spotify-第三方客户端&#34;&gt;Spotify 第三方客户端
+&lt;/h3&gt;&lt;h4 id=&#34;spotify-webui&#34;&gt;Spotify webUI
+&lt;/h4&gt;&lt;p&gt;这时候就要选择第三方的Spotify客户端了，或者也可以使用Spotify的webUI然后使用美化插件，我webUI使用的Arc浏览器搭配上Gallery美化，其实最后的效果还可以，而且很轻量化，除了没法看歌词都很完美。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_web.png&#34;
 	
 	
@@ -973,8 +1087,8 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;spotify-tui&#34;&gt;Spotify TUI&lt;/h4&gt;
-&lt;p&gt;但是webUI到底还是官方的UI而且没法看歌词，而且作为重度终端使用者，还是希望在终端上使用Spotify。我选择使用的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/aome510/spotify-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;spotify-tui&#34;&gt;Spotify TUI
+&lt;/h4&gt;&lt;p&gt;但是webUI到底还是官方的UI而且没法看歌词，而且作为重度终端使用者，还是希望在终端上使用Spotify。我选择使用的是&lt;a class=&#34;link&#34; href=&#34;https://github.com/aome510/spotify-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;spotify_player&lt;/code&gt;&lt;/a&gt;一个用rust开发的开源的Spotify TUI，使用vim的键位并且在&lt;code&gt;iTerm2&lt;/code&gt;中可以显示专辑封面，同时也可以在配置文件&lt;code&gt;~/.config/spotify-player/app.toml&lt;/code&gt;中进行自定义。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/spotify_tui_playback.png&#34;
 	
@@ -986,8 +1100,8 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;spotify-lyrics&#34;&gt;Spotify Lyrics&lt;/h3&gt;
-&lt;p&gt;接下来要解决官方客户端无法看歌词的问题，我们可以使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/raitonoberu/sptlrx.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;spotify-lyrics&#34;&gt;Spotify Lyrics
+&lt;/h3&gt;&lt;p&gt;接下来要解决官方客户端无法看歌词的问题，我们可以使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/raitonoberu/sptlrx.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;sptlrx&lt;/code&gt;&lt;/a&gt;这个开源的终端歌词同步软件，搭配&lt;code&gt;spotify_player&lt;/code&gt;使用可以看当前歌曲的歌词。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/spotify_tui/sptlrx.gif&#34;
 	
@@ -999,8 +1113,8 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;custom-your-tui&#34;&gt;Custom Your TUI&lt;/h3&gt;
-&lt;p&gt;这样我们就实现了在终端上使用Spotify并且显示滚动歌词，同时搭配&lt;a class=&#34;link&#34; href=&#34;https://github.com/karlstav/cava#macos-1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;custom-your-tui&#34;&gt;Custom Your TUI
+&lt;/h3&gt;&lt;p&gt;这样我们就实现了在终端上使用Spotify并且显示滚动歌词，同时搭配&lt;a class=&#34;link&#34; href=&#34;https://github.com/karlstav/cava#macos-1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;cava&lt;/code&gt;&lt;/a&gt;(一个Audio Visualizer，依赖&lt;a class=&#34;link&#34; href=&#34;https://github.com/kyleneideck/BackgroundMusic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;backgroud Music&lt;/code&gt;&lt;/a&gt;实现)，最后使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/xorg62/tty-clock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;tty-clock&lt;/code&gt;&lt;/a&gt;为整个布局点缀一下，就可以实现封面的效果了。&lt;/p&gt;
@@ -1014,8 +1128,8 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
-&lt;p&gt;虽然这样布局很不错，但是每次都要手动分屏很麻烦，能不能实现在终端敲一个命令自动分屏布局并且每个&lt;code&gt;pane&lt;/code&gt;自动执行对应的命令呢，当然是可以的啦。&lt;/p&gt;
+&lt;h3 id=&#34;optimization&#34;&gt;Optimization
+&lt;/h3&gt;&lt;p&gt;虽然这样布局很不错，但是每次都要手动分屏很麻烦，能不能实现在终端敲一个命令自动分屏布局并且每个&lt;code&gt;pane&lt;/code&gt;自动执行对应的命令呢，当然是可以的啦。&lt;/p&gt;
 &lt;p&gt;我一开始选择使用&lt;code&gt;tmux&lt;/code&gt;和&lt;code&gt;tmuxp&lt;/code&gt;这样就可以用&lt;code&gt;yml&lt;/code&gt;配置文件写好&lt;code&gt;tmux session&lt;/code&gt;布局并且在对应的&lt;code&gt;pane&lt;/code&gt;执行不同的命令，但是研究了一下&lt;code&gt;tmuxp&lt;/code&gt;发现好像无法实现封面那样的复杂布局，只有几个预设的布局，而且&lt;code&gt;tmux&lt;/code&gt;无法显示超过1M大小的图片所以&lt;code&gt;spotify_player&lt;/code&gt;无法显示图片。&lt;/p&gt;
 &lt;p&gt;所以最后另辟蹊径，使用&lt;code&gt;AppleScript&lt;/code&gt;直接对&lt;code&gt;iTerm2&lt;/code&gt;进行布局。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1093,8 +1207,8 @@ $$&lt;/p&gt;
         <guid>http://localhost:1313/p/mymacworkflow/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" alt="Featured image of post MyMacWorkflow" /&gt;&lt;!-- ![cover](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png) --&gt;
 &lt;!-- *spotify tui* --&gt;
-&lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow&lt;/h1&gt;
-&lt;p&gt;作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。&lt;/p&gt;
+&lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow
+&lt;/h1&gt;&lt;p&gt;作为一个六年的Mac用户，从2018款macbook pro到M2芯片的macbook air，积累了很多Mac的使用心得与好用的软件。在此分享一下我在Mac上的workflow。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Tips：本人专业背景为理论物理，主要科研工作偏向使用&lt;code&gt;Unix-like&lt;/code&gt;系统，所以不会涉及windows(但是可以使用&lt;code&gt;wsl2&lt;/code&gt;)。&lt;/li&gt;
@@ -1102,8 +1216,8 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;!-- ## Reserch  --&gt;
-&lt;h3 id=&#34;zotero&#34;&gt;Zotero&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;zotero&#34;&gt;Zotero
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;作为科研狗第一重要的事当然是看文献了，那么一个好的文献管理器至关重要，虽然学校提供了正版的EndNote但是相比而言更喜欢免费的Zotero，并且可以安装第三方插件，例如我装了preview插件可以预览文献内容。
 并且我主要使用latex为论文排版，Zotero可以快速导出bibtex文件方便在论文中引用文献。&lt;/li&gt;
 &lt;li&gt;同时Zotero可以利用官方提供的网盘进行多平台同步，但是免费容量只有5G，一般来说够用但是为了长远考虑，我使用微软学生认证提供的2T OneDrive挂载到koofr实现webDAV，这样就能使用白嫖到的2T空间做同步备份了。&lt;/li&gt;
@@ -1118,8 +1232,8 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;material-project&#34;&gt;Material Project&lt;/h3&gt;
-&lt;p&gt;作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，&lt;a class=&#34;link&#34; href=&#34;https://next-gen.materialsproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;material-project&#34;&gt;Material Project
+&lt;/h3&gt;&lt;p&gt;作为广大炼丹烧炉子研究工作者，在科研中肯定遇到要查询材料参数的情况，&lt;a class=&#34;link&#34; href=&#34;https://next-gen.materialsproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MaterialProject&lt;/a&gt;，这个网站作为材料领域做高通量计算方向搭建的，囊括了大量的材料参数，并且作为开源项目的一部分，此网站还提供了&lt;code&gt;python&lt;/code&gt;的&lt;code&gt;package(pymatgen)&lt;/code&gt;方便调用网站的api，可以获取材料的晶格结构等并且给出相关的文献。&lt;/p&gt;
 &lt;!-- ![material](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/material.png) --&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/xbunax/blogImg/main/202403091438804.png&#34;
@@ -1132,11 +1246,11 @@ $$&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;pngpaste&#34;&gt;Pngpaste&lt;/h3&gt;
-&lt;p&gt;我的论文写作工具主要是&lt;code&gt;neovim&lt;/code&gt;+&lt;code&gt;latex&lt;/code&gt;，但是由于饱受&lt;code&gt;latex&lt;/code&gt;上古语法困扰最近也在尝试&lt;code&gt;typst&lt;/code&gt;并且得益于&lt;code&gt;neovim&lt;/code&gt;活跃的社区，&lt;code&gt;typst&lt;/code&gt;的&lt;code&gt;lsp&lt;/code&gt;还有双向链接工具已经完全可用了。&lt;/p&gt;
+&lt;h3 id=&#34;pngpaste&#34;&gt;Pngpaste
+&lt;/h3&gt;&lt;p&gt;我的论文写作工具主要是&lt;code&gt;neovim&lt;/code&gt;+&lt;code&gt;latex&lt;/code&gt;，但是由于饱受&lt;code&gt;latex&lt;/code&gt;上古语法困扰最近也在尝试&lt;code&gt;typst&lt;/code&gt;并且得益于&lt;code&gt;neovim&lt;/code&gt;活跃的社区，&lt;code&gt;typst&lt;/code&gt;的&lt;code&gt;lsp&lt;/code&gt;还有双向链接工具已经完全可用了。&lt;/p&gt;
 &lt;p&gt;不管是&lt;code&gt;latex&lt;/code&gt;还是&lt;code&gt;typst&lt;/code&gt;写作时一直有一个痛点那就是插入图片，往往我会将图片截图存在剪贴板中，但是在用&lt;code&gt;neovim&lt;/code&gt;写论文时，经常要切出去保存图片非常影响效率。这时候我们就可以用&lt;code&gt;pngpaste&lt;/code&gt;这个CLI工具，可以在命令行环境下读取剪贴板图片保存为&lt;code&gt;png&lt;/code&gt;格式，这样在&lt;code&gt;neovim&lt;/code&gt;中用&lt;code&gt;toggleterm&lt;/code&gt;插件写一个&lt;code&gt;autocmd&lt;/code&gt;自动保存剪贴板图片，大大提升了效率。&lt;/p&gt;
-&lt;h3 id=&#34;window-manager&#34;&gt;Window Manager&lt;/h3&gt;
-&lt;p&gt;由于苹果的封闭，Mac上的窗口管理器选择并不是很多，&lt;code&gt;yabai&lt;/code&gt;虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且&lt;code&gt;yabai&lt;/code&gt;的主要贡献者只有作者一人，&lt;code&gt;yabai&lt;/code&gt;调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。&lt;/p&gt;
+&lt;h3 id=&#34;window-manager&#34;&gt;Window Manager
+&lt;/h3&gt;&lt;p&gt;由于苹果的封闭，Mac上的窗口管理器选择并不是很多，&lt;code&gt;yabai&lt;/code&gt;虽然可以实现平铺窗口管理器的大部分功能，但是需要关闭SIP，无法在Mac上使用iPad和iPhone应用也无法使用Touch ID支付。博主本人尝试过后发现bug相对较多，而且&lt;code&gt;yabai&lt;/code&gt;的主要贡献者只有作者一人，&lt;code&gt;yabai&lt;/code&gt;调用的api非常底层，每次苹果更新系统过都要等待作者适配，就体验来说并不是很好。&lt;/p&gt;
 &lt;p&gt;现在博主主力的window Manager是&lt;code&gt;amethyst&lt;/code&gt;。相比于&lt;code&gt;yabai&lt;/code&gt;的优势在于不用关闭SIP所以相对来说受系统版本变化影响较小，而且&lt;code&gt;amethyst&lt;/code&gt;配置相对简单，基本等于开箱即用，设置好快捷键键位就可以用了，不需要像&lt;code&gt;yabai&lt;/code&gt;设置好&lt;code&gt;yabairc&lt;/code&gt;还需要利用&lt;code&gt;skhd&lt;/code&gt;再去映射快捷键，虽然可以直接抄大佬的配置，但是需要踩的坑还是相对多一点。&lt;/p&gt;
 &lt;p&gt;但是不需要关闭SIP，就意味着相较于&lt;code&gt;yabai&lt;/code&gt;，&lt;code&gt;amethyst&lt;/code&gt;相对而言还是缺少了类似于创建销毁窗口，设置windows animation全局窗口透明度这些功能。但是&lt;code&gt;amethyst&lt;/code&gt;作为平铺窗口管理还是合格了，快速移动窗口，一键更改布局，单独设置float窗口.&lt;/p&gt;
 </description>
@@ -1147,8 +1261,8 @@ $$&lt;/p&gt;
         <pubDate>Sun, 25 Feb 2024 13:36:38 +0800</pubDate>
         
         <guid>http://localhost:1313/p/first/</guid>
-        <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
-</description>
+        <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World
+&lt;/h1&gt;</description>
         </item>
         
     </channel>
