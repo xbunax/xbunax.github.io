@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Workflow on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</title>
-        <link>http://localhost:1313/categories/workflow/</link>
+        <link>https://zhumocn.com/categories/workflow/</link>
         <description>Recent content in Workflow on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 08 Jun 2024 14:01:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/workflow/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Jun 2024 14:01:20 +0800</lastBuildDate><atom:link href="https://zhumocn.com/categories/workflow/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Typst Tutorial</title>
-        <link>http://localhost:1313/p/typst-tutorial/</link>
+        <link>https://zhumocn.com/p/typst-tutorial/</link>
         <pubDate>Sat, 08 Jun 2024 14:01:20 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/typst-tutorial/</guid>
+        <guid>https://zhumocn.com/p/typst-tutorial/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png" alt="Featured image of post Typst Tutorial" /&gt;&lt;h1 id=&#34;typst-tutorial&#34;&gt;Typst tutorial
 &lt;/h1&gt;&lt;h2 id=&#34;typst介绍&#34;&gt;Typst介绍
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;Typst&lt;/code&gt;是新的基于标记的科学排版语言其目标是作为&lt;code&gt;LaTex&lt;/code&gt;的替代，因为&lt;code&gt;Typst&lt;/code&gt;底层采用&lt;code&gt;Rust&lt;/code&gt;编写,所以在编译效率上比&lt;code&gt;LaTex&lt;/code&gt;高了非常多，基本上可以做到实时预览并且语法相当友好。&lt;/p&gt;
@@ -338,10 +338,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>MyMacWorkflow</title>
-        <link>http://localhost:1313/p/mymacworkflow/</link>
+        <link>https://zhumocn.com/p/mymacworkflow/</link>
         <pubDate>Tue, 05 Mar 2024 17:13:34 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/mymacworkflow/</guid>
+        <guid>https://zhumocn.com/p/mymacworkflow/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" alt="Featured image of post MyMacWorkflow" /&gt;&lt;!-- ![cover](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png) --&gt;
 &lt;!-- *spotify tui* --&gt;
 &lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow

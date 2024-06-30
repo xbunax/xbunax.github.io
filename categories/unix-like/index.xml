@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Unix-Like on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</title>
-        <link>http://localhost:1313/categories/unix-like/</link>
+        <link>https://zhumocn.com/categories/unix-like/</link>
         <description>Recent content in Unix-Like on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 05 Mar 2024 17:13:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/unix-like/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 05 Mar 2024 17:13:34 +0800</lastBuildDate><atom:link href="https://zhumocn.com/categories/unix-like/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MyMacWorkflow</title>
-        <link>http://localhost:1313/p/mymacworkflow/</link>
+        <link>https://zhumocn.com/p/mymacworkflow/</link>
         <pubDate>Tue, 05 Mar 2024 17:13:34 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/mymacworkflow/</guid>
+        <guid>https://zhumocn.com/p/mymacworkflow/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png" alt="Featured image of post MyMacWorkflow" /&gt;&lt;!-- ![cover](https://raw.githubusercontent.com/xbunax/blogImg/main/workflow/cover.png) --&gt;
 &lt;!-- *spotify tui* --&gt;
 &lt;h1 id=&#34;my-mac-workflow&#34;&gt;My Mac Workflow

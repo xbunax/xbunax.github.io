@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CUDA on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</title>
-        <link>http://localhost:1313/categories/cuda/</link>
+        <link>https://zhumocn.com/categories/cuda/</link>
         <description>Recent content in CUDA on 𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 31 Mar 2024 11:45:36 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/cuda/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 31 Mar 2024 11:45:36 +0800</lastBuildDate><atom:link href="https://zhumocn.com/categories/cuda/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CUDA简明介绍</title>
-        <link>http://localhost:1313/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</link>
+        <link>https://zhumocn.com/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</link>
         <pubDate>Sun, 31 Mar 2024 11:45:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</guid>
+        <guid>https://zhumocn.com/p/cuda%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/xbunax/blogImg/main/202403311231061.webp" alt="Featured image of post CUDA简明介绍" /&gt;&lt;h1 id=&#34;cuda简明介绍&#34;&gt;CUDA简明介绍
 &lt;/h1&gt;&lt;p&gt;随着AI的兴起，老黄的计算卡一卡难求，在深度学习领域老黄已经几乎事实上达到了垄断的地位。而让老黄成为AI领域那个“卖铲子”的正是CUDA，或者说是围绕CUDA诞生的一系列软件生态。&lt;/p&gt;
 &lt;p&gt;今天就用CUDA实现一个矩阵乘法来简单介绍一下CUDA是如何让GPU突破摩尔定律的以及为什么在AI训练中是如此重要。&lt;/p&gt;
