@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。 LaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。 如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。 Typst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\\bengin \\end环境嵌套。 Typst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 + The climate - Temperature - Precipitation + The topography + The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&#39;t take action soon!">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。\nLaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。\n如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。\nTypst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\\bengin \\end环境嵌套。\nTypst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 + The climate - Temperature - Precipitation + The topography + The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&#39;t take action soon! #figure( image(&#34;glacier.jpg&#34;, width: 70%), caption: [ _Glaciers_ form an important part of the earth&#39;s climate system. ], ) &lt;glaciers&gt; Typst数学公式 Typst数学公式语法并没有学习LaTex而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。\n">
 <title>Typst Tutorial</title>
 
 <link rel='canonical' href='https://zhumocn.com/p/typst-tutorial/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Typst Tutorial">
-<meta property='og:description' content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。 LaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。 如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。 Typst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\\bengin \\end环境嵌套。 Typst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 + The climate - Temperature - Precipitation + The topography + The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&#39;t take action soon!">
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Typst Tutorial">
+<meta property='og:description' content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。\nLaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。\n如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。\nTypst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\\bengin \\end环境嵌套。\nTypst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 + The climate - Temperature - Precipitation + The topography + The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&#39;t take action soon! #figure( image(&#34;glacier.jpg&#34;, width: 70%), caption: [ _Glaciers_ form an important part of the earth&#39;s climate system. ], ) &lt;glaciers&gt; Typst数学公式 Typst数学公式语法并没有学习LaTex而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。\n">
 <meta property='og:url' content='https://zhumocn.com/p/typst-tutorial/'>
 <meta property='og:site_name' content='𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-08T14:01:20&#43;08:00'/><meta property='article:modified_time' content='2024-06-08T14:01:20&#43;08:00'/><meta property='og:image' content='https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png' />
 <meta name="twitter:title" content="Typst Tutorial">
-<meta name="twitter:description" content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。 LaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。 如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。 Typst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\\bengin \\end环境嵌套。 Typst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 + The climate - Temperature - Precipitation + The topography + The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&#39;t take action soon!"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Typst tutorial Typst介绍 Typst是新的基于标记的科学排版语言其目标是作为LaTex的替代，因为Typst底层采用Rust编写,所以在编译效率上比LaTex高了非常多，基本上可以做到实时预览并且语法相当友好。\nLaTex由于其诞生于上世纪80s时间过早，并且经过几十年的发展技术包袱过重。笔者本科用LaTex排版论文经常苦于语法晦涩，一旦环境嵌套过深代码几乎失去可读性，并且一旦插入图片过多以及加入bibtex那么编译时间会极大拉长，只能将LaTex分章节编译。\n如果你也苦于LaTex的以上问题，那么Typst绝对值得尝试，Typst于2023年开源开始release，Typst社区非常活跃，笔者在2023年下半年开始使用，半年时间nvim和vscode的全套工具链就已经可用tinymist，typstyle，typst-preview。\nTypst 语法介绍 Typst语法上相对LaTex简洁很多，不需要像LaTex那样进行\\bengin \\end环境嵌套。\nTypst添加标题 1 2 3 4 5 = Introduction ##一级标题 == subsection ##二级标题 === subsubsection ##三级标题 Typst有序和无序列表 1 2 3 4 5 + The climate - Temperature - Precipitation + The topography + The geology Typst插入图表与引用 1 2 3 4 5 6 7 8 9 10 11 Glaciers as the one shown in @glaciers will cease to exist if we don&#39;t take action soon! #figure( image(&#34;glacier.jpg&#34;, width: 70%), caption: [ _Glaciers_ form an important part of the earth&#39;s climate system. ], ) &lt;glaciers&gt; Typst数学公式 Typst数学公式语法并没有学习LaTex而是添加了一些OOP的语法，并且简化了特殊符号的输入增强了公式的可读性。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://raw.githubusercontent.com/xbunax/blogImg/main/202406091609355.png' />
     <link rel="shortcut icon" href="/favicon.png" />
-
-  
-
 
     </head>
     <body class="
@@ -62,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/cat_hu4a9eb91f90977817f11c7ac5359cc702_107610_300x0_resize_box_3.png" width="300"
+                        <img src="/img/cat_hu9621687271386123049.png" width="300"
                             height="324" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -92,6 +89,27 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://cv.zhumocn.com'
+                        target="_blank"
+                        title="Resume"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 </svg>
 
 
@@ -474,107 +492,107 @@ $$</p>
 </h3><p><code>typst</code>官方也贴心的为<code>LaTex</code>用户提供了快速的<a class="link" href="https://typst.app/docs/guides/guide-for-latex-users/"  target="_blank" rel="noopener"
     >语法对照表</a>可以查看</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Element</th>
-<th>LaTeX</th>
-<th>Typst</th>
-<th>See</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Strong emphasis</td>
-<td><code>\textbf{strong}</code></td>
-<td><code>*strong*</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/strong/"  target="_blank" rel="noopener"
+  <thead>
+      <tr>
+          <th>Element</th>
+          <th>LaTeX</th>
+          <th>Typst</th>
+          <th>See</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Strong emphasis</td>
+          <td><code>\textbf{strong}</code></td>
+          <td><code>*strong*</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/strong/"  target="_blank" rel="noopener"
     >strong</a></td>
-</tr>
-<tr>
-<td>Emphasis</td>
-<td><code>\emph{emphasis}</code></td>
-<td><code>_emphasis_</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/emph/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Emphasis</td>
+          <td><code>\emph{emphasis}</code></td>
+          <td><code>_emphasis_</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/emph/"  target="_blank" rel="noopener"
     >emph</a></td>
-</tr>
-<tr>
-<td>Monospace / code</td>
-<td><code>\texttt{print(1)}</code></td>
-<td><code>`print(1)`</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/text/raw/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Monospace / code</td>
+          <td><code>\texttt{print(1)}</code></td>
+          <td><code>`print(1)`</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/text/raw/"  target="_blank" rel="noopener"
     >raw</a></td>
-</tr>
-<tr>
-<td>Link</td>
-<td><code>\url{https://typst.app}</code></td>
-<td><code>https://typst.app/</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/link/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Link</td>
+          <td><code>\url{https://typst.app}</code></td>
+          <td><code>https://typst.app/</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/link/"  target="_blank" rel="noopener"
     >link</a></td>
-</tr>
-<tr>
-<td>Label</td>
-<td><code>\label{intro}</code></td>
-<td><code>&lt;intro&gt;</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/foundations/label/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Label</td>
+          <td><code>\label{intro}</code></td>
+          <td><code>&lt;intro&gt;</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/foundations/label/"  target="_blank" rel="noopener"
     >label</a></td>
-</tr>
-<tr>
-<td>Reference</td>
-<td><code>\ref{intro}</code></td>
-<td><code>@intro</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/ref/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Reference</td>
+          <td><code>\ref{intro}</code></td>
+          <td><code>@intro</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/ref/"  target="_blank" rel="noopener"
     >ref</a></td>
-</tr>
-<tr>
-<td>Citation</td>
-<td><code>\cite{humphrey97}</code></td>
-<td><code>@humphrey97</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/cite/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Citation</td>
+          <td><code>\cite{humphrey97}</code></td>
+          <td><code>@humphrey97</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/cite/"  target="_blank" rel="noopener"
     >cite</a></td>
-</tr>
-<tr>
-<td>Bullet list</td>
-<td><code>itemize</code> environment</td>
-<td><code>- List</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/list/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Bullet list</td>
+          <td><code>itemize</code> environment</td>
+          <td><code>- List</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/list/"  target="_blank" rel="noopener"
     >list</a></td>
-</tr>
-<tr>
-<td>Numbered list</td>
-<td><code>enumerate</code> environment</td>
-<td><code>+ List</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/enum/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Numbered list</td>
+          <td><code>enumerate</code> environment</td>
+          <td><code>+ List</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/enum/"  target="_blank" rel="noopener"
     >enum</a></td>
-</tr>
-<tr>
-<td>Term list</td>
-<td><code>description</code> environment</td>
-<td><code>/ Term: List</code></td>
-<td><a class="link" href="https://typst.app/docs/reference/model/terms/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Term list</td>
+          <td><code>description</code> environment</td>
+          <td><code>/ Term: List</code></td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/terms/"  target="_blank" rel="noopener"
     >terms</a></td>
-</tr>
-<tr>
-<td>Figure</td>
-<td><code>figure</code> environment</td>
-<td><code>figure</code> function</td>
-<td><a class="link" href="https://typst.app/docs/reference/model/figure/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Figure</td>
+          <td><code>figure</code> environment</td>
+          <td><code>figure</code> function</td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/figure/"  target="_blank" rel="noopener"
     >figure</a></td>
-</tr>
-<tr>
-<td>Table</td>
-<td><code>table</code> environment</td>
-<td><code>table</code> function</td>
-<td><a class="link" href="https://typst.app/docs/reference/model/table/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Table</td>
+          <td><code>table</code> environment</td>
+          <td><code>table</code> function</td>
+          <td><a class="link" href="https://typst.app/docs/reference/model/table/"  target="_blank" rel="noopener"
     >table</a></td>
-</tr>
-<tr>
-<td>Equation</td>
-<td><code>$x$, align / equation environments</code></td>
-<td><code>$x$, </code>$ x = y $`</td>
-<td><a class="link" href="https://typst.app/docs/reference/math/equation/"  target="_blank" rel="noopener"
+      </tr>
+      <tr>
+          <td>Equation</td>
+          <td><code>$x$, align / equation environments</code></td>
+          <td><code>$x$, </code>$ x = y $`</td>
+          <td><a class="link" href="https://typst.app/docs/reference/math/equation/"  target="_blank" rel="noopener"
     >equation</a></td>
-</tr>
-</tbody>
+      </tr>
+  </tbody>
 </table></div>
 <h2 id="typst制作slides">Typst制作Slides
 </h2><p><code>Typst</code>目前制作<code>Slides</code>的体验比<code>LaTex</code>制作<code>Beamer</code>好了很多，我们以<a class="link" href="https://github.com/TJ-CSCCG/tongji-slides-typst"  target="_blank" rel="noopener"
@@ -793,7 +811,7 @@ $$</p>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -882,7 +900,7 @@ $$</p>
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

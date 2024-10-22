@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Beautify Spotify Desktop App 在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了spicetify这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。 Install and Uninstall 如果是Mac和Linux推荐使用包管理器安装在终端输入 1 brew install spicetify-cli 或者使用官方编译好的二进制文件 1 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh 卸载方法如下 1 2 3 spicetify restore rm -rf ~/.spicetify rm -rf ~/.config/spicetify Prepare 首先在终端中输入 spicetify 生成配置文件 如果运行无误，接着要备份一下配置文件 1 spicetify backup apply enable-devtools 在每次更改theme和color后要需要执行一下spicetify apply以应用。 Customize 1 2 3 4 5 6 7 8 .$XDG_config/spicetify ├── Backup ├── CustomApps ├── Extensions ├── Extracted ├── Themes ├── config-xpui.ini └── spicetify-themes 这是spicetify配置文件的结构，我们主要修改的就是config-xpui.ini这个文件，当然也可以直接通过命令行修改。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Beautify Spotify Desktop App 在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了spicetify这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。\nInstall and Uninstall 如果是Mac和Linux推荐使用包管理器安装在终端输入\n1 brew install spicetify-cli 或者使用官方编译好的二进制文件\n1 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh 卸载方法如下\n1 2 3 spicetify restore rm -rf ~/.spicetify rm -rf ~/.config/spicetify Prepare 首先在终端中输入 spicetify 生成配置文件\n如果运行无误，接着要备份一下配置文件\n1 spicetify backup apply enable-devtools 在每次更改theme和color后要需要执行一下spicetify apply以应用。\nCustomize 1 2 3 4 5 6 7 8 .$XDG_config/spicetify ├── Backup ├── CustomApps ├── Extensions ├── Extracted ├── Themes ├── config-xpui.ini └── spicetify-themes 这是spicetify配置文件的结构，我们主要修改的就是config-xpui.ini这个文件，当然也可以直接通过命令行修改。\n">
 <title>Spotify beautify</title>
 
 <link rel='canonical' href='https://zhumocn.com/p/spotify-beautify/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Spotify beautify">
-<meta property='og:description' content="Beautify Spotify Desktop App 在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了spicetify这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。 Install and Uninstall 如果是Mac和Linux推荐使用包管理器安装在终端输入 1 brew install spicetify-cli 或者使用官方编译好的二进制文件 1 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh 卸载方法如下 1 2 3 spicetify restore rm -rf ~/.spicetify rm -rf ~/.config/spicetify Prepare 首先在终端中输入 spicetify 生成配置文件 如果运行无误，接着要备份一下配置文件 1 spicetify backup apply enable-devtools 在每次更改theme和color后要需要执行一下spicetify apply以应用。 Customize 1 2 3 4 5 6 7 8 .$XDG_config/spicetify ├── Backup ├── CustomApps ├── Extensions ├── Extracted ├── Themes ├── config-xpui.ini └── spicetify-themes 这是spicetify配置文件的结构，我们主要修改的就是config-xpui.ini这个文件，当然也可以直接通过命令行修改。">
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Spotify beautify">
+<meta property='og:description' content="Beautify Spotify Desktop App 在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了spicetify这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。\nInstall and Uninstall 如果是Mac和Linux推荐使用包管理器安装在终端输入\n1 brew install spicetify-cli 或者使用官方编译好的二进制文件\n1 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh 卸载方法如下\n1 2 3 spicetify restore rm -rf ~/.spicetify rm -rf ~/.config/spicetify Prepare 首先在终端中输入 spicetify 生成配置文件\n如果运行无误，接着要备份一下配置文件\n1 spicetify backup apply enable-devtools 在每次更改theme和color后要需要执行一下spicetify apply以应用。\nCustomize 1 2 3 4 5 6 7 8 .$XDG_config/spicetify ├── Backup ├── CustomApps ├── Extensions ├── Extracted ├── Themes ├── config-xpui.ini └── spicetify-themes 这是spicetify配置文件的结构，我们主要修改的就是config-xpui.ini这个文件，当然也可以直接通过命令行修改。\n">
 <meta property='og:url' content='https://zhumocn.com/p/spotify-beautify/'>
 <meta property='og:site_name' content='𝒯𝒾𝓂𝑒 𝓌𝒶𝒾𝓉𝓈 𝒻𝑜𝓇 𝓃𝑜 𝑜𝓃𝑒'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-04-05T11:35:52&#43;08:00'/><meta property='article:modified_time' content='2024-04-05T11:35:52&#43;08:00'/><meta property='og:image' content='https://raw.githubusercontent.com/xbunax/blogImg/main/202404051305362.png' />
 <meta name="twitter:title" content="Spotify beautify">
-<meta name="twitter:description" content="Beautify Spotify Desktop App 在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了spicetify这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。 Install and Uninstall 如果是Mac和Linux推荐使用包管理器安装在终端输入 1 brew install spicetify-cli 或者使用官方编译好的二进制文件 1 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh 卸载方法如下 1 2 3 spicetify restore rm -rf ~/.spicetify rm -rf ~/.config/spicetify Prepare 首先在终端中输入 spicetify 生成配置文件 如果运行无误，接着要备份一下配置文件 1 spicetify backup apply enable-devtools 在每次更改theme和color后要需要执行一下spicetify apply以应用。 Customize 1 2 3 4 5 6 7 8 .$XDG_config/spicetify ├── Backup ├── CustomApps ├── Extensions ├── Extracted ├── Themes ├── config-xpui.ini └── spicetify-themes 这是spicetify配置文件的结构，我们主要修改的就是config-xpui.ini这个文件，当然也可以直接通过命令行修改。"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Beautify Spotify Desktop App 在上篇关于Spotify TUI的文章中提到Spotify的桌面应用的UI设计博主本人并不是很喜欢，但是最近偶然发现了spicetify这款开源的Spotify美化以及插件管理软件，极大提升了Spotify的使用体验。\nInstall and Uninstall 如果是Mac和Linux推荐使用包管理器安装在终端输入\n1 brew install spicetify-cli 或者使用官方编译好的二进制文件\n1 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh 卸载方法如下\n1 2 3 spicetify restore rm -rf ~/.spicetify rm -rf ~/.config/spicetify Prepare 首先在终端中输入 spicetify 生成配置文件\n如果运行无误，接着要备份一下配置文件\n1 spicetify backup apply enable-devtools 在每次更改theme和color后要需要执行一下spicetify apply以应用。\nCustomize 1 2 3 4 5 6 7 8 .$XDG_config/spicetify ├── Backup ├── CustomApps ├── Extensions ├── Extracted ├── Themes ├── config-xpui.ini └── spicetify-themes 这是spicetify配置文件的结构，我们主要修改的就是config-xpui.ini这个文件，当然也可以直接通过命令行修改。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://raw.githubusercontent.com/xbunax/blogImg/main/202404051305362.png' />
     <link rel="shortcut icon" href="/favicon.png" />
-
-  
-
 
     </head>
     <body class="
@@ -62,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/cat_hu4a9eb91f90977817f11c7ac5359cc702_107610_300x0_resize_box_3.png" width="300"
+                        <img src="/img/cat_hu9621687271386123049.png" width="300"
                             height="324" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -92,6 +89,27 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://cv.zhumocn.com'
+                        target="_blank"
+                        title="Resume"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 </svg>
 
 
@@ -637,7 +655,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -726,7 +744,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
